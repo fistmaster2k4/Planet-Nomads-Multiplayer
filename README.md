@@ -1,3 +1,5 @@
+![Planet Nomads multiplayer — two players together in the original game](docs/images/planet-nomads-multiplayer.jpg)
+
 # Planet Nomads Multiplayer
 
 **An unofficial multiplayer mod for the original Planet Nomads game — not a rebuilt game.**
@@ -41,7 +43,7 @@ The manager needs the **.NET 8 Desktop Runtime (x64)**. The client mod needs an 
 - `docs/STATUS.md` — tested behaviour and outstanding work.
 - `docs/RELEASING.md` — installer packaging and publication checklist.
 
-Client/server source and separately redistributable binaries will be added after the source/dependency review. This initial repository intentionally does not include original commercial game binaries, Unity assemblies or the maintainer's personal world databases.
+**Distribution policy:** This repository publishes documentation and compiled releases only. The manager, injected client mod and dedicated-server source code remain private and are not offered for distribution. Original game binaries, Unity assemblies and personal world databases are not distributed.
 
 ## Disclaimer
 
