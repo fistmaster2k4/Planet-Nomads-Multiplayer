@@ -35,4 +35,4 @@ Settings are saved under `%LOCALAPPDATA%\PlanetNomadsMultiplayerManager\manager.
 
 ## Known limitation
 
-The embedded console's player count is based on observed connect/disconnect messages and is only authoritative for the server process started by the manager. A future server query endpoint should replace that inference.
+The embedded console's player count is based on observed connect/disconnect messages and is only authoritative for the server process started by the manager. It does not use a server query endpoint.
