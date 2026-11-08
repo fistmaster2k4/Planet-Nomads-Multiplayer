@@ -39,6 +39,8 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 **Requirements:** Windows, the .NET 8 Desktop Runtime (x64), and an existing installation of **Planet Nomads 1.0.7.2**. The original game is not included.
 
+**Need the original game?** It's available on GOG: [Planet Nomads on GOG](https://www.gog.com/en/game/planet_nomads).
+
 **Unofficial fan-made mod.** Not affiliated with Craneballs. Planet Nomads and its original assets belong to their respective rights holders.
 
 **Distribution:** Compiled releases and user guides only. Project source code is private.
