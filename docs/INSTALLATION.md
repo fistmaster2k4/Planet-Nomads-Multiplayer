@@ -1,44 +1,26 @@
 # Installation
 
-## Requirements
+![INSTALL screen](images/install.jpg)
 
-- Windows with **.NET 8 Desktop Runtime (x64)** for the manager.
-- An installed, licensed **Planet Nomads 1.0.7.2** for the multiplayer client.
-- Network access for remote multiplayer; see [Server setup](SERVER.md).
+1. Run `PlanetNomadsManager-0.1.21-Setup.exe`.
+2. Open **Planet Nomads Multiplayer Manager** using the desktop icon or Start Menu.
+3. Under **INSTALL**, select your existing Planet Nomads game folder and a destination for the dedicated server.
+4. Enter your player name and install the multiplayer components.
+5. Under **SERVER**, choose the world, server name, player limit, port and optional password. Click **SAVE SETTINGS**.
+6. Under **LAUNCH**, click **LAUNCH SERVER**. Use **PLAY GAME** to start Planet Nomads.
 
-The manager's own installer does **not** install the commercial game.
+**Requirements:** Planet Nomads **1.0.7.2** and the **.NET 8 Desktop Runtime (x64)**.
 
-## Manager installer (0.1.21)
+A ready-to-play server world is included. To use your own single-player world, follow the [world setup instructions](SERVER.md#using-your-own-world).
 
-![Manager INSTALL panel showing game selection, dedicated-server destination and player name](images/install.jpg)
+## Updates and removal
 
-1. Run `PlanetNomadsManager-0.1.21-Setup.exe`. It installs the manager under the current user's `%LOCALAPPDATA%\Programs\PlanetNomadsMultiplayerManager` directory. Administrator elevation is not required.
-2. Start the manager from the **Start Menu** or the **desktop icon**.
-3. In **INSTALL**, select or confirm the existing game location and the desired dedicated-server folder.
-4. Choose your player name. Install the client and server components as required.
-5. Use **SERVER** to configure the world name, server name, port, password and administrator identity.
-6. Use **LAUNCH** to run the server; use **PLAY GAME** to launch the existing `PlanetNomads.exe`.
+- **UPGRADE** updates installed multiplayer components when newer versions are included.
+- **UNINSTALL** in the manager removes its installed client/server components without deleting saved worlds.
+- Windows **Uninstall** removes the manager application and shortcuts.
 
-A default dedicated-server world is included. See [Using your own world](SERVER.md#using-your-own-world) to create a custom world in single-player and copy it to the dedicated server.
+## Player backup
 
-The manager verifies a game-root `version.txt` identifying the compatible game build as `1.0.7.2`. Steam locations and common GOG paths can be discovered automatically, or entered manually. GOG runtime compatibility still requires a separate in-game test.
+Under **OPTIONS**, use **BACKUP PROFILE** to save your player configuration, local saves and multiplayer identity. **RESTORE PROFILE** restores that backup.
 
-## Upgrade and removal
-
-- **UPGRADE** is offered when an installed managed component is older than the bundled version.
-- The manager tracks its own installed files, preserves manually modified files and leaves world saves untouched.
-- **UNINSTALL** in the manager removes managed client/server components. This is different from uninstalling the **manager application** in Windows Settings.
-- The Windows manager uninstaller removes the launcher and shortcuts. It **does not** remove separately installed client/server components or their saves.
-
-## Player-profile backup
-
-**OPTIONS → BACKUP PROFILE** creates an archive of the player's configuration, applicable local saves and multiplayer identity data. **RESTORE PROFILE** reinstates those files after creating a safety backup.
-
-**Treat this ZIP as private.** It contains the profile identifier and private identity token used to recognize your player on dedicated servers. Never commit it to GitHub or post it publicly.
-
-## Troubleshooting
-
-- Launcher will not start: verify the .NET **8 Desktop Runtime (x64)** is installed.
-- Game not found: browse to the original game installation; check `version.txt`.
-- Remote player cannot connect: verify the chosen TCP port and router/firewall rules.
-- Query/server-list status is not yet implemented; see [Current status](STATUS.md).
+**Keep profile backup ZIPs private.** They contain the identity information used by your multiplayer character.
