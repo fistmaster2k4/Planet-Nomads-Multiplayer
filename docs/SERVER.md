@@ -36,7 +36,7 @@ A ready-to-play **Day1** world is included with the dedicated-server installatio
    %USERPROFILE%\AppData\LocalLow\Craneballs\PlanetNomads\Saves
    ```
 
-5. Planet Nomads stores its single-player save files **directly inside this Saves directory**, not in a separate world folder. Copy the files for your newly saved game, including `_working.db` and `_main.db` (and the matching `save_*.db` file if present).
+5. Planet Nomads stores its single-player save files **directly inside this Saves directory**, not in a separate world folder. Copy **`_main.db` and `_working.db`**. These are the two files the dedicated server needs. Numbered files such as `save_6.db` and `save_7.db` are not needed for the server import.
 6. In your dedicated-server installation, open `Saves` and **create a new folder** with a name of your choice, such as `MyWorld`. Paste the copied save files **inside** it. For example:
 
    ```text
