@@ -19,7 +19,7 @@ The server selects the world by its **folder name**:
 
 For that folder, `server.cfg` must contain `World=Day1`. **Do not put `World=` inside a folder name.** The internal database save name does not replace this configuration mapping.
 
-The manager's current first-install path can seed the bundled `Day1` starter world. Existing worlds must be preserved during upgrades and removal. Before a public release, the starter world must be reviewed for redistribution.
+The manager includes the `Day1` world and preserves existing world saves during upgrades and removal.
 
 ## Default world
 
