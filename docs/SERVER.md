@@ -56,4 +56,4 @@ Start via **LAUNCH → LAUNCH SERVER** in the manager to capture the live consol
 
 The server currently supports the console commands `status`, `save`, `quit` and `help`. Manager buttons send save/shutdown commands; **RESTART** saves, shuts down and starts the process again.
 
-A full query endpoint, authoritative connected-player list, and kick/ban commands are **future work**, not currently available through the manager.
+The current build does **not** provide a query endpoint, authoritative connected-player list, or kick/ban commands.
