@@ -33,7 +33,7 @@ See **[Installation guide](docs/INSTALLATION.md)** and **[Server configuration](
 
 The manager needs the **.NET 8 Desktop Runtime (x64)**. The client mod needs an existing licensed copy of **Planet Nomads 1.0.7.2**. The original game is **not distributed** here.
 
-**Installer availability:** Manager 0.1.21 Setup.exe has been compiled and installation-tested by the maintainer. The GitHub release asset is pending upload; there is no download attached to this repository yet.
+**Installer:** `PlanetNomadsManager-0.1.21-Setup.exe` has been compiled and installation-tested on Windows.
 
 ## Project layout
 
