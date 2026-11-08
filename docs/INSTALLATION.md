@@ -12,13 +12,12 @@ The manager's own installer does **not** install the commercial game.
 
 ![Manager INSTALL panel showing game selection, dedicated-server destination and player name](images/install.jpg)
 
-1. Run `PlanetNomadsManager-0.1.21-Setup.exe`.
-2. Run Setup. It installs the manager under the current user's `%LOCALAPPDATA%\Programs\PlanetNomadsMultiplayerManager` directory. Administrator elevation is not required.
-3. Start the manager from the **Start Menu** or the **desktop icon**.
-4. In **INSTALL**, select or confirm the existing game location and the desired dedicated-server folder.
-5. Choose your player name. Install the client and server components as required.
-6. Use **SERVER** to configure the world name, server name, port, password and administrator identity.
-7. Use **LAUNCH** to run the server; use **PLAY GAME** to launch the existing `PlanetNomads.exe`.
+1. Run `PlanetNomadsManager-0.1.21-Setup.exe`. It installs the manager under the current user's `%LOCALAPPDATA%\Programs\PlanetNomadsMultiplayerManager` directory. Administrator elevation is not required.
+2. Start the manager from the **Start Menu** or the **desktop icon**.
+3. In **INSTALL**, select or confirm the existing game location and the desired dedicated-server folder.
+4. Choose your player name. Install the client and server components as required.
+5. Use **SERVER** to configure the world name, server name, port, password and administrator identity.
+6. Use **LAUNCH** to run the server; use **PLAY GAME** to launch the existing `PlanetNomads.exe`.
 
 The manager verifies a game-root `version.txt` identifying the compatible game build as `1.0.7.2`. Steam locations and common GOG paths can be discovered automatically, or entered manually. GOG runtime compatibility still requires a separate in-game test.
 
