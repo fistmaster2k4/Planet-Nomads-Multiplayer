@@ -37,6 +37,5 @@ The manager verifies a game-root `version.txt` identifying the compatible game b
 
 - Launcher will not start: verify the .NET **8 Desktop Runtime (x64)** is installed.
 - Game not found: browse to the original game installation; check `version.txt`.
-- Server can't load the world: verify the matching `Saves/<World>` directory and its `_working.db` / `_main.db` files.
 - Remote player cannot connect: verify the chosen TCP port and router/firewall rules.
 - Query/server-list status is not yet implemented; see [Current status](STATUS.md).
