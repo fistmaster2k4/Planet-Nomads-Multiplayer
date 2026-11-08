@@ -36,17 +36,18 @@ A ready-to-play **Day1** world is included with the dedicated-server installatio
    %USERPROFILE%\AppData\LocalLow\Craneballs\PlanetNomads\Saves
    ```
 
-5. Find the folder containing your newly saved world and **copy that entire folder**.
-6. Open the dedicated-server installation folder you selected in the manager. Inside its `Saves` folder, paste the copied world folder. For example, if your server was installed to `E:\NomadsDedi`, the result could be:
+5. Planet Nomads stores its single-player save files **directly inside this Saves directory**, not in a separate world folder. Copy the files for your newly saved game, including `_working.db` and `_main.db` (and the matching `save_*.db` file if present).
+6. In your dedicated-server installation, open `Saves` and **create a new folder** with a name of your choice, such as `MyWorld`. Paste the copied save files **inside** it. For example:
 
    ```text
-   E:\NomadsDedi\Saves\MyWorld
+   E:\NomadsDedi\Saves\MyWorld\_working.db
+   E:\NomadsDedi\Saves\MyWorld\_main.db
    ```
 
 7. Open the **Planet Nomads Multiplayer Manager**, select **SERVER**, and choose `MyWorld` from the **SAVE WORLD** dropdown. Click **SAVE SETTINGS**.
 8. Select **LAUNCH**, then **LAUNCH SERVER**.
 
-Keep the original single-player world as a backup. The manager lists available worlds when you open the SERVER page, so revisit that page if you copied the folder while the manager was already open.
+**Copy, don't move** the original single-player save files. The manager lists available world folders when you open the SERVER page, so revisit that page if you created the folder while the manager was already open.
 
 ## Configuration
 
