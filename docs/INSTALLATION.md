@@ -10,6 +10,8 @@ The manager's own installer does **not** install the commercial game.
 
 ## Manager installer (0.1.21)
 
+![Manager INSTALL panel showing game selection, dedicated-server destination and player name](images/install.jpg)
+
 1. Run `PlanetNomadsManager-0.1.21-Setup.exe`.
 2. Run Setup. It installs the manager under the current user's `%LOCALAPPDATA%\Programs\PlanetNomadsMultiplayerManager` directory. Administrator elevation is not required.
 3. Start the manager from the **Start Menu** or the **desktop icon**.
