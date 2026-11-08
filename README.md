@@ -1,50 +1,44 @@
-![Planet Nomads multiplayer — two players together in the original game](docs/images/planet-nomads-multiplayer.jpg)
+![Two players together in Planet Nomads](docs/images/planet-nomads-multiplayer.jpg)
 
 # Planet Nomads Multiplayer
 
-**An unofficial multiplayer mod for the original Planet Nomads game — not a rebuilt game.**
+**Multiplayer for the original Planet Nomads — a mod, not a game rebuild.**
 
-This project uses a BepInEx-injected client plugin, a separate dedicated server and a Windows manager. You still run the original **PlanetNomads.exe**, with its original game assets, rendering and single-player modes.
+Play the original Planet Nomads with a multiplayer client mod, a dedicated server and a Windows manager to install and control them.
 
-> **Development preview.** Working connectivity and the launcher are verified on the project's test machine. Full multiplayer synchronization is not yet implemented.
+## Included
 
-## Current builds
+| Component | Version |
+| --- | --- |
+| Multiplayer Manager | **0.1.21** |
+| Multiplayer client mod | **0.3.8** |
+| Dedicated server | **0.3.7** |
 
-| Component | Version | Notes |
-| --- | --- | --- |
-| Multiplayer Manager | **0.1.21** | Windows desktop launcher / installer tested |
-| Injected multiplayer client | **0.3.8** | Runs within Planet Nomads 1.0.7.2 |
-| Dedicated server | **0.3.7** | .NET Framework 4.7.2, separate headless process |
+## Working and tested
 
-## What works today
+- Windows installer, desktop icon and Start Menu shortcut.
+- Manager launch, save, restart and clean shutdown of the dedicated server.
+- Multiplayer client connection to a dedicated server.
+- Original single-player game modes and menus remain available.
+- Custom world loading from the dedicated server.
+- Persistent player identity and configured server administrator recognition.
+- Client/server upgrade and manager uninstall.
+- Game launch from the manager, with the server console left visible.
 
-- A conventional Windows installer for the manager, with Start Menu and desktop shortcuts.
-- Manager detects game locations, installs/upgrades/uninstalls the multiplayer components, and preserves existing saves and unrelated game files.
-- Original single-player menus remain available alongside the added Multiplayer entry.
-- Dedicated server loads an existing Planet Nomads world from `Saves/<World>` and clients can join.
-- Client profile identity persists across sessions; dedicated server can verify the configured local administrator.
-- Manager launches the dedicated server without a separate terminal, displays its live console and offers **Launch Server**, **Save**, **Shutdown**, **Restart**.
-- Manager launches the original game directly, keeping the current manager panel visible and suppressing launcher audio.
-- Settings include launcher music/UI sounds, game command-line options and player-profile backup/restore.
+## Current limitations
 
-## Installing
+- The manager does not yet have a connected-player list or kick/ban buttons.
+- Dedicated-server query is not active.
+- Some multiplayer gameplay interactions and world changes are not yet synchronized.
 
-See **[Installation guide](docs/INSTALLATION.md)** and **[Server configuration](docs/SERVER.md)**.
+## Get started
 
-The manager needs the **.NET 8 Desktop Runtime (x64)**. The client mod needs an existing licensed copy of **Planet Nomads 1.0.7.2**. The original game is **not distributed** here.
+- [Installation instructions](docs/INSTALLATION.md)
+- [Dedicated server and custom worlds](docs/SERVER.md)
+- [Manager controls](docs/MANAGER.md)
 
-**Installer:** `PlanetNomadsManager-0.1.21-Setup.exe` has been compiled and installation-tested on Windows.
+**Requirements:** Windows, the .NET 8 Desktop Runtime (x64), and an existing installation of **Planet Nomads 1.0.7.2**. The original game is not included.
 
-## Project layout
+**Unofficial fan-made mod.** Not affiliated with Craneballs. Planet Nomads and its original assets belong to their respective rights holders.
 
-- `docs/INSTALLATION.md` — requirements and installation workflow.
-- `docs/SERVER.md` — dedicated server setup, world folders, ports and administration.
-- `docs/MANAGER.md` — manager panels and options.
-- `docs/STATUS.md` — tested behaviour and outstanding work.
-- `docs/RELEASING.md` — installer packaging and publication checklist.
-
-**Distribution policy:** This repository publishes documentation and compiled releases only. The manager, injected client mod and dedicated-server source code remain private and are not offered for distribution. Original game binaries, Unity assemblies and personal world databases are not distributed.
-
-## Disclaimer
-
-Unofficial fan-made modification. Not affiliated with Craneballs or the Planet Nomads rights holders. All original game trademarks, code and assets belong to their respective owners. You must obtain the original game separately.
+**Distribution:** Compiled releases and user guides only. Project source code is private.
