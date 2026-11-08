@@ -14,14 +14,7 @@ Baseline as of **8 November 2026**.
 | Server query TCP +1 | **Not implemented** |
 | Player list / kick / ban in manager | **Not implemented** |
 | Shared physics, tools, construction, terrain and dropped-item replication | **Incomplete** |
-| Fully synchronized multiplayer clock and cryopod sleep | **Future work** |
+| Fully synchronized multiplayer clock and cryopod sleep | **Not implemented** |
 
 These are internal development test results, not a general compatibility certification.
 
-## Planned next work
-
-1. Add a server query listener on game port + 1 with explicit machine-readable server/version/world/player status.
-2. Feed the manager's real player list and later kick/ban controls from authenticated server data.
-3. Continue multiplayer state synchronization: time, terrain/building edits, dropped items, inventories, remote animation and vehicles.
-4. Add shared cryopod/player association and coordinated sleep only when all players participate.
-5. Test clean installs and upgrades on additional Windows and game distributions.
