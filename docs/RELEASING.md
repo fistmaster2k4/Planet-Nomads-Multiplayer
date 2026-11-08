@@ -32,6 +32,6 @@ Check the source line against the working installer script before publishing.
 
 **Never commit** profiles, `playerConfig.xml`, private multiplayer identity tokens, server passwords, logs, original paid game files, or personal world databases to this repository.
 
-## Separation of source and payload
+## Distribution policy
 
-Keep versioned client and server source in self-contained build folders with their own `.csproj` files. Do not make builds depend on another developer's local Codex directory. Runtime payloads belong in release assets after the redistribution review.
+The project source remains private. This repository carries documentation and compiled release packages only, after the necessary redistribution review. Build and staging directories stay local to the maintainer; do not commit client, server or manager source.
