@@ -10,6 +10,8 @@ Edits dedicated-server configuration for server name, world, TCP port, bind IP, 
 
 ## LAUNCH
 
+![Manager LAUNCH panel showing server status, console and control buttons](images/launch.jpg)
+
 The manager launches the dedicated server **silently** (no additional terminal), captures standard output/error into its embedded console and displays:
 
 - Server name, version, world, port and locally observed online/offline status.
@@ -23,6 +25,8 @@ The player list and kick/ban actions are not yet implemented. The displayed onli
 Immediately launches the configured original `PlanetNomads.exe`, without replacing the currently displayed manager page. The manager can remain open on another monitor showing server logs. Launcher audio is suppressed while the game or server is active.
 
 ## OPTIONS
+
+![Manager OPTIONS panel showing launcher sound, backups, game arguments and profile tools](images/options.jpg)
 
 - **LAUNCHER MUSIC** — ON/OFF.
 - **UI SFX** — ON/OFF.
