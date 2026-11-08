@@ -17,7 +17,7 @@ An NSIS example for the uninstall registry line (quotes matter):
 WriteRegStr HKCU "${REGKEY}" "UninstallString" '"$INSTDIR\\Uninstall.exe"'
 ```
 
-Check the source line against the working installer script before publishing.
+Use the quoting shown in the tested installer script.
 
 ## Release validation
 
@@ -27,8 +27,6 @@ Check the source line against the working installer script before publishing.
 - [ ] Verify client/server upgrade and data preservation on a fresh install.
 - [ ] Review redistribution rights for bundled third-party runtimes and game-derived Unity assemblies.
 - [ ] Ensure the starter world contains no personal/private gameplay data and can be redistributed.
-- [ ] Upload signed/hashed release asset and attach clear release notes.
-- [ ] Publish documentation after checking against final binaries.
 
 **Never commit** profiles, `playerConfig.xml`, private multiplayer identity tokens, server passwords, logs, original paid game files, or personal world databases to this repository.
 
