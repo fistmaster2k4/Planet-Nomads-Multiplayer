@@ -21,6 +21,33 @@ For that folder, `server.cfg` must contain `World=Day1`. **Do not put `World=` i
 
 The manager's current first-install path can seed the bundled `Day1` starter world. Existing worlds must be preserved during upgrades and removal. Before a public release, the starter world must be reviewed for redistribution.
 
+## Default world
+
+A ready-to-play **Day1** world is included with the dedicated-server installation. You can launch the server using this world without creating a new save.
+
+## Using your own world
+
+1. Launch the original **Planet Nomads** game.
+2. Start a **new single-player game** or create a **custom single-player world**.
+3. Once you've entered the world, **save the game**, then quit Planet Nomads.
+4. Open File Explorer and paste this into its address bar:
+
+   ```text
+   %USERPROFILE%\AppData\LocalLow\Craneballs\PlanetNomads\Saves
+   ```
+
+5. Find the folder containing your newly saved world and **copy that entire folder**.
+6. Open the dedicated-server installation folder you selected in the manager. Inside its `Saves` folder, paste the copied world folder. For example, if your server was installed to `E:\NomadsDedi`, the result could be:
+
+   ```text
+   E:\NomadsDedi\Saves\MyWorld
+   ```
+
+7. Open the **Planet Nomads Multiplayer Manager**, select **SERVER**, and choose `MyWorld` from the **SAVE WORLD** dropdown. Click **SAVE SETTINGS**.
+8. Select **LAUNCH**, then **LAUNCH SERVER**.
+
+Keep the original single-player world as a backup. The manager lists available worlds when you open the SERVER page, so revisit that page if you copied the folder while the manager was already open.
+
 ## Configuration
 
 ![Manager SERVER panel showing world, server name, port, player limit, administrator and backup settings](images/server.jpg)
