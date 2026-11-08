@@ -23,6 +23,8 @@ The manager's current first-install path can seed the bundled `Day1` starter wor
 
 ## Configuration
 
+![Manager SERVER panel showing world, server name, port, player limit, administrator and backup settings](images/server.jpg)
+
 The **SERVER** panel edits `server.cfg` without overwriting unrelated keys or comments.
 
 | Key | Purpose |
