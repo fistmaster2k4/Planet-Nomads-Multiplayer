@@ -1,89 +1,47 @@
 # Dedicated server
 
-**Current dedicated-server version: 0.3.7.** It runs separately from the original game and is managed by the Windows launcher.
+![SERVER screen](images/server.jpg)
 
-## World folder
+## Included world
 
-The server selects the world by its **folder name**:
-
-```text
-<dedicated-server-directory>/
-  NomadsDedicated.exe
-  server.cfg
-  Saves/
-    Day1/
-      _working.db
-      _main.db
-      ...
-```
-
-For that folder, `server.cfg` must contain `World=Day1`. **Do not put `World=` inside a folder name.** The internal database save name does not replace this configuration mapping.
-
-The manager includes the `Day1` world and preserves existing world saves during upgrades and removal.
-
-## Default world
-
-A ready-to-play **Day1** world is included with the dedicated-server installation. You can launch the server using this world without creating a new save.
+The dedicated server includes a ready-to-play world named **Day1**. Select it under **SERVER → SAVE WORLD**, save settings and launch your server.
 
 ## Using your own world
 
-1. Launch the original **Planet Nomads** game.
-2. Start a **new single-player game** or create a **custom single-player world**.
-3. Once you've entered the world, **save the game**, then quit Planet Nomads.
-4. Open File Explorer and paste this into its address bar:
+1. Launch the original **Planet Nomads**.
+2. Create a new single-player game or custom single-player world.
+3. Enter the world, **save**, then quit the game.
+4. In Windows File Explorer, paste this location into the address bar:
 
    ```text
    %USERPROFILE%\AppData\LocalLow\Craneballs\PlanetNomads\Saves
    ```
 
-5. Planet Nomads stores its single-player save files **directly inside this Saves directory**, not in a separate world folder. Copy **`_main.db` and `_working.db`**. These are the two files the dedicated server needs. Numbered files such as `save_6.db` and `save_7.db` are not needed for the server import.
-6. In your dedicated-server installation, open `Saves` and **create a new folder** with a name of your choice, such as `MyWorld`. Paste the copied save files **inside** it. For example:
+5. Copy **`_main.db`** and **`_working.db`**. You don't need the numbered `save_*.db` files.
+6. In your dedicated-server installation's **Saves** folder, create a new folder named after your world, such as **MyWorld**.
+7. Paste the two copied files into **MyWorld**.
+8. Open the manager's **SERVER** page, choose **MyWorld** from **SAVE WORLD**, then click **SAVE SETTINGS**.
+9. Select **LAUNCH → LAUNCH SERVER**.
 
-   ```text
-   E:\NomadsDedi\Saves\MyWorld\_working.db
-   E:\NomadsDedi\Saves\MyWorld\_main.db
-   ```
+**Copy the files; don't move them.** Your original single-player save stays in place.
 
-7. Open the **Planet Nomads Multiplayer Manager**, select **SERVER**, and choose `MyWorld` from the **SAVE WORLD** dropdown. Click **SAVE SETTINGS**.
-8. Select **LAUNCH**, then **LAUNCH SERVER**.
+## Server settings
 
-**Copy, don't move** the original single-player save files. The manager lists available world folders when you open the SERVER page, so revisit that page if you created the folder while the manager was already open.
+The **SERVER** screen lets you choose:
 
-## Configuration
+- **Save World** — the world to load.
+- **Server Name** — the name of your server.
+- **Max Players** — player limit.
+- **Server Port** — default **6553**.
+- **Bind IP** — **0.0.0.0** for all available local network interfaces.
+- **Admin Player** — your chosen administrator character.
+- **Backup Frequency / Rolling Backup Max** — automatic server-save backups.
+- **Server Password** — optional password for joining.
 
-![Manager SERVER panel showing world, server name, port, player limit, administrator and backup settings](images/server.jpg)
+Click **SAVE SETTINGS** when finished.
 
-The **SERVER** panel edits `server.cfg` without overwriting unrelated keys or comments.
+## Allowing friends to connect
 
-| Key | Purpose |
-| --- | --- |
-| `World` | Directory name directly beneath `Saves` |
-| `ServerName` | Human-readable server name |
-| `Port` | TCP gameplay port; default **6553** |
-| `BindIP` | Local network interface; `0.0.0.0` binds all interfaces |
-| `MaxPlayers` | Server player limit |
-| `Password` | Optional server password |
-| `BackupIntervalSeconds` | Server backup frequency, range 60–86400 |
-| `BackupKeepCount` | Retained backups (0 = unlimited, maximum 10000) |
-| `AdminPlayerId` | Persistent configured administrator identity, provisioned by the manager |
+Forward the selected **TCP server port** through your router to the computer running the server, and allow it through Windows Firewall.
 
-The manager also records the configured admin player name and securely provisions the corresponding local identity token. Player names alone are not trusted as authentication.
-
-## Network ports
-
-For default configuration:
-
-- **6553/TCP:** Game connections (implemented).
-- **6554/TCP:** Reserved as the proposed query port (game port + 1); **query listener not yet implemented**.
-
-The manager displays a dynamic reminder of both ports, but **forwarding 6554 alone does not enable querying in 0.3.7**. Forward the gameplay port through the router and permit it through Windows Firewall when accepting external clients.
-
-Use a LAN IP or `0.0.0.0` for `BindIP`. Do not bind to an external WAN address unless it is actually assigned to a local interface.
-
-## Launch and commands
-
-Start via **LAUNCH → LAUNCH SERVER** in the manager to capture the live console inside the application. The manager doesn't attach to servers started independently.
-
-The server currently supports the console commands `status`, `save`, `quit` and `help`. Manager buttons send save/shutdown commands; **RESTART** saves, shuts down and starts the process again.
-
-The current build does **not** provide a query endpoint, authoritative connected-player list, or kick/ban commands.
+The manager also displays the following TCP port as a reminder, but the separate query service is **not active** in this version.
