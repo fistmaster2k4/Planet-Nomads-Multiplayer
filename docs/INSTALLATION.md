@@ -19,6 +19,8 @@ The manager's own installer does **not** install the commercial game.
 5. Use **SERVER** to configure the world name, server name, port, password and administrator identity.
 6. Use **LAUNCH** to run the server; use **PLAY GAME** to launch the existing `PlanetNomads.exe`.
 
+A default dedicated-server world is included. See [Using your own world](SERVER.md#using-your-own-world) to create a custom world in single-player and copy it to the dedicated server.
+
 The manager verifies a game-root `version.txt` identifying the compatible game build as `1.0.7.2`. Steam locations and common GOG paths can be discovered automatically, or entered manually. GOG runtime compatibility still requires a separate in-game test.
 
 ## Upgrade and removal
