@@ -2,41 +2,31 @@
 
 ## INSTALL
 
-Finds compatible Planet Nomads installations (Steam/common GOG locations or manual selection), installs/upgrades the client plugin and dedicated server payloads, and supports a single managed uninstall action. Client plugin 0.3.8 and server 0.3.7 are bundled with this build.
+Choose your game folder, dedicated-server destination and player name. Install, upgrade or uninstall the multiplayer components.
 
 ## SERVER
 
-Edits dedicated-server configuration for server name, world, TCP port, bind IP, player limit, password, administrator and backup policy. The forwarding reminder updates when the configured port changes.
+![SERVER screen](images/server.jpg)
+
+Choose the server's world, name, port, password, administrator and backup settings. Click **SAVE SETTINGS** to apply changes.
 
 ## LAUNCH
 
-![Manager LAUNCH panel showing server status, console and control buttons](images/launch.jpg)
+![LAUNCH screen](images/launch.jpg)
 
-The manager launches the dedicated server **silently** (no additional terminal), captures standard output/error into its embedded console and displays:
+Start the dedicated server inside the manager without opening another console window. Its live output appears here, together with server name, version, world, status and player count.
 
-- Server name, version, world, port and locally observed online/offline status.
-- Player count tracked from server connection/disconnection console messages.
-- **LAUNCH SERVER**, **SAVE**, **SHUTDOWN**, **RESTART** buttons.
-
-The player list and kick/ban actions are not yet implemented. The displayed online status is derived from the process and its console, **not from a server query listener**.
+Buttons: **LAUNCH SERVER**, **SAVE**, **SHUTDOWN**, **RESTART**.
 
 ## PLAY GAME
 
-Immediately launches the configured original `PlanetNomads.exe`, without replacing the currently displayed manager page. The manager can remain open on another monitor showing server logs. Launcher audio is suppressed while the game or server is active.
+Launches the original Planet Nomads game. The manager stays open on the same page so you can watch server activity on another monitor.
 
 ## OPTIONS
 
-![Manager OPTIONS panel showing launcher sound, backups, game arguments and profile tools](images/options.jpg)
+![OPTIONS screen](images/options.jpg)
 
-- **LAUNCHER MUSIC** — ON/OFF.
-- **UI SFX** — ON/OFF.
-- **WORLD BACKUPS** — AUTO/MANUAL selection for player profile backup behaviour.
-- **GAME ARGUMENTS** — additional launch arguments.
-- **ENVIRONMENT** — semicolon-delimited `NAME=VALUE` entries for the launched game.
-- **BACKUP PROFILE** / **RESTORE PROFILE** — player settings, local saves and multiplayer identity.
-
-Settings are saved under `%LOCALAPPDATA%\PlanetNomadsMultiplayerManager\manager.cfg`.
-
-## Known limitation
-
-The embedded console's player count is based on observed connect/disconnect messages and is only authoritative for the server process started by the manager. It does not use a server query endpoint.
+- **LAUNCHER MUSIC** and **UI SFX** — sound on/off.
+- **WORLD BACKUPS** — automatic or manual.
+- **GAME ARGUMENTS** — additional game launch options.
+- **BACKUP PROFILE** and **RESTORE PROFILE** — back up your saves and multiplayer identity.
