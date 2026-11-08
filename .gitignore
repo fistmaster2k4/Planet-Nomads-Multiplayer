@@ -1,0 +1,39 @@
+# Local builds and IDE files
+**/bin/
+**/obj/
+.vs/
+.idea/
+*.user
+*.suo
+*.pdb
+*.cache
+*.log
+
+# Private runtime state / player identities
+**/manager.cfg
+**/server.cfg
+**/playerConfig.xml
+**/players.db
+**/construction.db
+**/electricity.db
+**/drops.db
+**/containers.db
+**/technology.db
+**/_working.db
+**/_main.db
+**/save_*.db
+**/Saves/
+**/Multiplayer/
+**/.nomadsmanager-backups/
+**/.nomadsmanager-install.json
+**/Logs/
+**/BepInEx/LogOutput.log
+*Profile-*.zip
+
+# Original game binaries and development artifacts
+**/PlanetNomads_Data/
+**/UnityEngine*.dll
+**/Assembly-CSharp.dll
+*.exe
+*.msi
+*.zip
