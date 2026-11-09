@@ -16,7 +16,7 @@
 The GOG installation does not include the `version.txt` file expected by Multiplayer Manager 0.1.21. The GOG edition has been tested installing the mod, launching the game and joining a dedicated server with this workaround:
 
 1. Download [version.txt](../version.txt) from this repository (open the link and select **Download raw file**).
-2. Copy `version.txt` into your **Planet Nomads game installation folder** — the same folder containing `PlanetNomads.exe` (not `PlanetNomads_Data`).
+2. Copy `version.txt` into your **Planet Nomads game installation folder** — the same folder containing `PlanetNomads.exe`.
 3. Open the Multiplayer Manager, select that game folder under **INSTALL**, and continue with the steps above.
 
 This file only helps the Manager recognise the GOG installation; it does not modify the game itself.
