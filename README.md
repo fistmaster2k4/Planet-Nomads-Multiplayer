@@ -37,6 +37,8 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 - [Dedicated server and custom worlds](docs/SERVER.md)
 - [Manager controls](docs/MANAGER.md)
 
+**GOG players:** Manager 0.1.21 needs a small [version.txt workaround](docs/INSTALLATION.md#gog-version-temporary-installation-fix) before installing the mod.
+
 **Requirements:** Windows, the .NET 8 Desktop Runtime (x64), and an existing installation of **Planet Nomads 1.0.7.2**. The original game is not included.
 
 **Need the original game?** It's available on GOG: [Planet Nomads on GOG](https://www.gog.com/en/game/planet_nomads).
