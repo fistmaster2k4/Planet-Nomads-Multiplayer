@@ -1,8 +1,12 @@
-# Multiplayer Manager 0.1.21
+# Multiplayer Manager 0.1.22
 
 ## INSTALL
 
-Choose your game folder, dedicated-server destination and player name. Install, upgrade or uninstall the multiplayer components.
+Choose **INSTALL CLIENT** for the Planet Nomads game folder or **INSTALL SERVER** for a dedicated-server destination. Only the selected component and its path are required.
+
+The manager detects each installed component and its version separately. **UPDATE CLIENT** and **UPDATE SERVER** appear when the manager contains a newer corresponding version. Installing or updating one component leaves the other unchanged.
+
+The manager includes client **0.3.8** and dedicated server **0.3.7**.
 
 ## SERVER
 
