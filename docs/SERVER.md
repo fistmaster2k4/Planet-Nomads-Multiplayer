@@ -2,7 +2,9 @@
 
 ![SERVER screen](images/server.jpg)
 
-The current bundled server is **v0.3.8**, paired with multiplayer client **v0.3.9** (`v4-env1`).
+The current bundled server is **v0.3.8**, compatible with multiplayer client **v0.3.10** (`v4-env1`).
+
+The v0.3.10 remote-player flashlight enhancement uses the existing player-data relay and does not require a server rebuild.
 
 World time is owned by the dedicated server. Joining and reconnecting players receive its current time, and the server manages independent weather schedules for the game's 25 biome profiles. Existing client-side sky, shelter and atmospheric presentation remain native.
 
