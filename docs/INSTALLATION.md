@@ -42,6 +42,11 @@ BepInEx and TNet have loaded and connected under Proton on Steam Deck, but multi
 
 ## Updates and removal
 
+![Separate client and server update controls in Manager 0.1.24](images/manager-install-0.1.24.png)
+
+The INSTALL screen has separate client and server destinations. Once a component is installed, its button becomes **UPDATE CLIENT** or **UPDATE SERVER** when a newer version is available.
+
+
 - The manager detects the client and server independently. **UPDATE CLIENT** or **UPDATE SERVER** appears when the included version is newer than the installed component.
 - Updating one component leaves the other unchanged.
 - If managed files were changed outside the Manager, the update asks for confirmation and backs up the modified versions before replacement.
