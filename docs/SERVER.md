@@ -2,6 +2,10 @@
 
 ![SERVER screen](images/server.jpg)
 
+The current bundled server is **v0.3.8**, paired with multiplayer client **v0.3.9** (`v4-env1`).
+
+World time is owned by the dedicated server. Joining and reconnecting players receive its current time, and the server manages independent weather schedules for the game's 25 biome profiles. Existing client-side sky, shelter and atmospheric presentation remain native.
+
 ## Included world
 
 The dedicated server includes a ready-to-play world named **Day1**. Select it under **SERVER → SAVE WORLD**, save settings and launch your server.
