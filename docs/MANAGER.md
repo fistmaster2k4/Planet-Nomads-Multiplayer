@@ -1,4 +1,4 @@
-# Multiplayer Manager 0.1.22
+# Multiplayer Manager 0.1.24
 
 ## INSTALL
 
@@ -6,7 +6,9 @@ Choose **INSTALL CLIENT** for the Planet Nomads game folder or **INSTALL SERVER*
 
 The manager detects each installed component and its version separately. **UPDATE CLIENT** and **UPDATE SERVER** appear when the manager contains a newer corresponding version. Installing or updating one component leaves the other unchanged.
 
-The manager includes client **0.3.8** and dedicated server **0.3.7**.
+The manager includes client **0.3.9** and dedicated server **0.3.8**. Both use the matching `v4-env1` protocol.
+
+If managed files were modified outside the Manager, an update asks for confirmation and preserves copies of those files before replacing them. Declining leaves the installation unchanged.
 
 ## SERVER
 
