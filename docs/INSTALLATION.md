@@ -1,10 +1,10 @@
 # Installation
 
-## Windows — Multiplayer Manager 0.1.24
+## Windows — Multiplayer Manager 0.1.25
 
 ![INSTALL screen](images/install.jpg)
 
-1. Download the **0.1.24 Manager installer** from [GitHub Releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) and run the setup executable.
+1. Download the **0.1.25 Manager installer** from [GitHub Releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) and run the setup executable.
 2. Open **Planet Nomads Multiplayer Manager** using its desktop icon or Start Menu shortcut.
 3. Under **INSTALL**, choose the component you want:
    - **INSTALL CLIENT** — select your existing Planet Nomads game folder (containing `PlanetNomads.exe`), enter your player name, then install.
@@ -19,11 +19,11 @@ A ready-to-play server world is included. To use your own single-player world, f
 
 ## Standalone client — manual installation
 
-The [Standalone Client v0.3.9 release](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases/tag/0.3.9StandaloneClient) provides the client without the manager.
+The [Standalone Client v0.3.10 release](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases/tag/0.3.10StandaloneClient) provides the client without the manager.
 
-1. Download `PlanetNomadsMultiplayer-Client-0.3.9-Standalone.zip` from the standalone client release.
+1. Download `PlanetNomadsMultiplayer-Client-0.3.10-Standalone.zip` from the standalone client release.
 2. Open the Planet Nomads installation folder containing `PlanetNomads.exe`.
-3. Extract the ZIP **directly into that folder**, preserving its directory structure. It includes BepInEx 5.4.23.6, the multiplayer plugin, TNet libraries, BepInEx configuration, Doorstop and `winhttp.dll`.
+3. Extract the ZIP **directly into that folder**, preserving its directory structure. It includes BepInEx 5.4.23.6, the multiplayer plugin, TNet libraries, BepInEx and multiplayer configuration files, Doorstop and `winhttp.dll`.
 4. Launch the game and select **Multiplayer** on the main menu.
 
 ### SteamOS / Linux using Proton (experimental)
@@ -42,7 +42,7 @@ BepInEx and TNet have loaded and connected under Proton on Steam Deck, but multi
 
 ## Updates and removal
 
-![Separate client and server update controls in Manager 0.1.24](images/manager-install-0.1.24.png)
+![Separate client and server update controls in Manager](images/manager-install-0.1.24.png)
 
 The INSTALL screen has separate client and server destinations. Once a component is installed, its button becomes **UPDATE CLIENT** or **UPDATE SERVER** when a newer version is available.
 
@@ -50,7 +50,7 @@ The INSTALL screen has separate client and server destinations. Once a component
 - The manager detects the client and server independently. **UPDATE CLIENT** or **UPDATE SERVER** appears when the included version is newer than the installed component.
 - Updating one component leaves the other unchanged.
 - If managed files were changed outside the Manager, the update asks for confirmation and backs up the modified versions before replacement.
-- The client and server must both use the matching `v4-env1` multiplayer protocol (Client 0.3.9 / Server 0.3.8).
+- Client 0.3.10 is compatible with the existing Server 0.3.8 (`v4-env1` protocol); this client-only flashlight enhancement does not require a server update.
 - **UNINSTALL** removes manager-managed client/server files while preserving saved worlds and unrelated files. Modified managed files may be retained.
 - Windows **Uninstall** removes the manager application and shortcuts.
 
