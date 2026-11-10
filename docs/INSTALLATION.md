@@ -36,7 +36,7 @@ WINEDLLOVERRIDES="winhttp=n,b" %command%
 
 This makes Proton load the supplied BepInEx `winhttp.dll` proxy before Wine's built-in DLL. Without the override, the game may launch while BepInEx and the multiplayer menu do not.
 
-BepInEx and the plugin have loaded on Steam Deck, and TNet has connected to a Windows server. Multiplayer world loading on Steam Deck remains unconfirmed; support is experimental.
+SteamOS/Linux client support is experimental.
 
 **Dedicated-server hosting is Windows-only.** The standalone ZIP contains the client, not the server.
 
