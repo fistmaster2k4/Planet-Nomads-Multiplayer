@@ -1,10 +1,10 @@
 # Installation
 
-## Windows — Multiplayer Manager 0.1.25
+## Windows — Multiplayer Manager 0.1.26
 
 ![INSTALL screen](images/install.jpg)
 
-1. Download the **0.1.25 Manager installer** from [GitHub Releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) and run the setup executable.
+1. Download the **0.1.26 Manager installer** from [GitHub Releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) and run the setup executable.
 2. Open **Planet Nomads Multiplayer Manager** using its desktop icon or Start Menu shortcut.
 3. Under **INSTALL**, choose the component you want:
    - **INSTALL CLIENT** — select your existing Planet Nomads game folder (containing `PlanetNomads.exe`), enter your player name, then install.
@@ -19,9 +19,9 @@ A ready-to-play server world is included. To use your own single-player world, f
 
 ## Standalone client — manual installation
 
-The [Standalone Client v0.3.10 release](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases/tag/0.3.10StandaloneClient) provides the client without the manager.
+The [standalone client releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) provide the client without the manager. Choose the latest **0.3.10 Dropped Items Update** package, not the earlier 0.3.10 build.
 
-1. Download `PlanetNomadsMultiplayer-Client-0.3.10-Standalone.zip` from the standalone client release.
+1. Download `PlanetNomadsMultiplayer-Client-0.3.10-DropFix-Standalone.zip` from the latest standalone client release.
 2. Open the Planet Nomads installation folder containing `PlanetNomads.exe`.
 3. Extract the ZIP **directly into that folder**, preserving its directory structure. It includes BepInEx 5.4.23.6, the multiplayer plugin, TNet libraries, BepInEx and multiplayer configuration files, Doorstop and `winhttp.dll`.
 4. Launch the game and select **Multiplayer** on the main menu.
@@ -50,7 +50,8 @@ The INSTALL screen has separate client and server destinations. Once a component
 - The manager detects the client and server independently. **UPDATE CLIENT** or **UPDATE SERVER** appears when the included version is newer than the installed component.
 - Updating one component leaves the other unchanged.
 - If managed files were changed outside the Manager, the update asks for confirmation and backs up the modified versions before replacement.
-- Client 0.3.10 is compatible with the existing Server 0.3.8 (`v4-env1` protocol); this client-only flashlight enhancement does not require a server update.
+- **Manager 0.1.26 includes updated dropped-item payloads.** The internal client version remains 0.3.10 and the server's displayed version may remain unchanged, but this release is a new payload revision. The manager offers updates to installations made by 0.1.25 even when the component version strings match.
+- **Dropped-item sharing requires both the updated client and updated dedicated server.** The earlier 0.3.10 flashlight-only client and older server do not provide the full dropped-item functionality.
 - **UNINSTALL** removes manager-managed client/server files while preserving saved worlds and unrelated files. Modified managed files may be retained.
 - Windows **Uninstall** removes the manager application and shortcuts.
 
