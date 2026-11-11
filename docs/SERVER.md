@@ -4,7 +4,9 @@
 
 The current bundled server is **v0.3.8**, compatible with multiplayer client **v0.3.10** (`v4-env1`).
 
-The v0.3.10 remote-player flashlight enhancement uses the existing player-data relay and does not require a server rebuild.
+The earlier v0.3.10 remote-player flashlight enhancement used the existing player-data relay without a server rebuild. **The newer v0.3.10 Dropped Items Update does require the updated dedicated server payload** supplied with Manager 0.1.26. The component version strings were not incremented for this fix; an older server reporting the same version is not sufficient.
+
+Dropped items now use server-owned shared state. Either connected player can see and collect an item dropped by another player (verified in-game). Partial pickups, concurrent collection safeguards, reconnect/late-join recovery and restart persistence passed automated regression tests; full in-game verification of those edge cases is still pending.
 
 World time is owned by the dedicated server. Joining and reconnecting players receive its current time, and the server manages independent weather schedules for the game's 25 biome profiles. Existing client-side sky, shelter and atmospheric presentation remain native.
 
