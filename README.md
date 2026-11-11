@@ -10,7 +10,7 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 | Component | Version |
 | --- | --- |
-| Multiplayer Manager | **0.1.25** |
+| Multiplayer Manager | **0.1.26** |
 | Multiplayer client mod | **0.3.10** |
 | Dedicated server | **0.3.8** |
 
@@ -23,6 +23,8 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 - Server time applied when players join or reconnect, with native day/night progression between events.
 - Server-owned weather schedules for the game's 25 biome profiles.
 - Remote players' flashlights illuminate the environment at night, with on/off state synchronised to other clients.
+- Dropped items appear at shared positions for connected players and can be collected by either player (verified in-game).
+- Server-owned dropped-item state supports partial pickups, late joiners and restart recovery (automated regression tests passed; broader in-game verification ongoing).
 - Original single-player game modes and menus remain available.
 - Custom world loading from the dedicated server.
 - Persistent player identity and configured server administrator recognition.
