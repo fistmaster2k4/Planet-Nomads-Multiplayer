@@ -21,6 +21,14 @@ If managed files were modified outside the Manager, an update asks for confirmat
 
 Choose the server's world, name, port, password, administrator and backup settings. Click **SAVE SETTINGS** to apply changes.
 
+### Changing world game mode (upcoming world-settings update)
+
+> [!WARNING]
+> Starting an existing world in **Creative** mode can permanently unlock its entire technology tree. Switching back to **Free Roam** or **Survival** does not restore the previous technology progression. This behaviour has been confirmed in multiplayer testing.
+>
+> Back up the complete server world folder, including its multiplayer persistence databases, before starting it in Creative mode if you want to preserve its original technology progression. Use a separate test world or a copy for Creative experiments. Restoring only the game mode setting is not sufficient.
+
+
 ## LAUNCH
 
 ![LAUNCH screen](images/launch.jpg)
