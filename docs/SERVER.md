@@ -2,17 +2,31 @@
 
 ![SERVER screen](images/server.jpg)
 
-The current bundled server is **v0.3.8**, compatible with multiplayer client **v0.3.10** (`v4-env1`).
+The current bundled server is **v0.3.27**, compatible with multiplayer client **v0.3.27**, supplied with Manager **0.1.27**. Update both client and server together.
 
-The earlier v0.3.10 remote-player flashlight enhancement used the existing player-data relay without a server rebuild. **The newer v0.3.10 Dropped Items Update does require the updated dedicated server payload** supplied with Manager 0.1.26. The component version strings were not incremented for this fix; an older server reporting the same version is not sufficient.
+> **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
 
 Dropped items now use server-owned shared state. Either connected player can see and collect an item dropped by another player (verified in-game). Partial pickups, concurrent collection safeguards, reconnect/late-join recovery and restart persistence passed automated regression tests; full in-game verification of those edge cases is still pending.
 
 World time is owned by the dedicated server. Joining and reconnecting players receive its current time, and the server manages independent weather schedules for the game's 25 biome profiles. Existing client-side sky, shelter and atmospheric presentation remain native.
 
-## Included world
+## Multiplayer gameplay
 
-The dedicated server includes a ready-to-play world named **Day1**. Select it under **SERVER → SAVE WORLD**, save settings and launch your server.
+The server coordinates player respawning, shared sleeping, vehicle physics authority, electrical connections and battery state. Sleeping requires all connected players to agree, using Sleeping Bags or powered Cryopods. Vehicle physics authority can move between players while vehicle and electrical state remain shared.
+
+The Biomass Stove is available from starting technology in multiplayer. It uses its own biomass-fuelled power supply to produce dried fruitage, dried meat and purified water. See the [0.3.27 feature overview](../README.md#whats-new-in-0327).
+
+## Included starter worlds
+
+The dedicated server includes three pre-generated worlds, each deliberately created with different terrain settings.
+
+| World | Terrain and starting conditions | Ideal for |
+| --- | --- | --- |
+| **Day1** | Very flat terrain with a low water table | Large bases, expansive construction and wheeled vehicles |
+| **Day2** | Slightly raised terrain with excellent starter materials around the player | Cooperative survival and early progression |
+| **Day3** | More rugged terrain | Challenging exploration and specialist vehicle engineering |
+
+Select a world under **SERVER → SAVE WORLD**, click **SAVE SETTINGS**, then launch your server.
 
 ## Using your own world
 
@@ -46,7 +60,15 @@ The **SERVER** screen lets you choose:
 - **Backup Frequency / Rolling Backup Max** — automatic server-save backups.
 - **Server Password** — optional password for joining.
 
-Click **SAVE SETTINGS** when finished.
+The **World / Gameplay Configuration** section also provides per-world settings for game mode, day/night cycle length, night speed, day slowdown, player attributes, mining-machine excavation, gathering multiplier, animal nest density, bad weather reduction, aggressive animals, aggressive flora and weather. See [Manager gameplay configuration](MANAGER.md#world--gameplay-configuration) for details and the Creative mode warning.
+
+![World gameplay settings in Manager 0.1.27](images/manager-world-settings.jpg)
+
+Click **SAVE SETTINGS** when finished. Restart the server to load the saved settings if it is running.
+
+## World backups
+
+Back up the entire selected world folder, including `_main.db`, `_working.db` and all multiplayer persistence databases, before updating or changing game modes. The multiplayer databases store construction, containers, drops, electricity, environment, players and technology state. Copying only the two native databases is appropriate for importing a new single-player world, not for preserving a complete existing multiplayer world.
 
 ## Allowing friends to connect
 
