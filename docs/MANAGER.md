@@ -78,3 +78,7 @@ When the Manager launches a Planet Nomads client and automatic profile backup is
 ### Multiplayer 0.3.30 bundled improvements
 
 The included client and server deliver improved live server-clock synchronisation and shared sky progression, plus seated-player presentation in driven and undriven cockpits. Two empty adjacent rounded cockpits can both be used: when one becomes occupied, remote clients display the player at that cockpit's native seat pivot. Seated appearance does not grant driving or physics authority; those remain separate multiplayer controls. See the [main README](../README.md#whats-new-in-0330) for the release summary.
+
+## Sharing blueprints
+
+Steam and GOG players can exchange locally exported Replicator constructions by ZIPping the numbered blueprint folder and extracting it into the recipient's `UserConstructions` directory. See [Blueprint sharing](BLUEPRINTS.md) for instructions and the Multiplayer Rover example.
