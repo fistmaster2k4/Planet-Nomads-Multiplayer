@@ -10,11 +10,18 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 | Component | Version |
 | --- | --- |
-| Multiplayer Manager | **0.1.27** |
-| Multiplayer client mod | **0.3.27** |
-| Dedicated server | **0.3.27** |
+| Multiplayer Manager | **0.1.28** |
+| Multiplayer client mod | **0.3.30** |
+| Dedicated server | **0.3.30** |
 
-## What's new in 0.3.27
+## What's new in 0.3.30
+
+- **Consistent day/night skies:** Corrected differing sun and sky positions between players by waiting for the live server-authoritative clock before completing world loading. Multiplayer sky progression now follows a common rate.
+- **Driven and undriven cockpit occupants:** Players seated in either type of cockpit are represented to other clients, including stationary vehicles, late joiners and cockpit exits.
+- **Either empty cockpit works:** With two empty adjacent rounded cockpits, either can be occupied. Seated presentation follows the cockpit's actual occupancy event and native seat pivot, rather than assuming one fixed passenger-only presentation position. This does not change who controls the vehicle: driving authority and physics leasing remain separate.
+- **Manager 0.1.28:** Avoids attempting automatic profile backups while another Planet Nomads client is still running against the same LocalLow profile database. Normal backup can proceed after the final client closes.
+
+### Also included from previous releases
 
 - Player respawning on death, with selection of available drop pods and Cryopods.
 - Synchronised sleeping in Sleeping Bags and powered Cryopods. All connected players must agree to sleep before shared time acceleration begins.
@@ -24,11 +31,11 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 - Enclosed vehicle cockpits and Cryopods exclude water when submerged.
 - Improved water rendering performance, frame pacing, player instantiation and initial world synchronisation on joining a server.
 - Fixed the Emergency Printer incorrectly requiring an external power supply in multiplayer.
-- Added the **Biomass Stove**, a new starter construction for producing dried fruitage, dried meat and purified water using biomass fuel.
+- Added the **Biomass Stove**, a starter construction for producing dried fruitage, dried meat and purified water using biomass fuel.
 
 ![Multiplayer rover with an enclosed cockpit and Cryopod](docs/images/multiplayer-vehicle.jpg)
 
-### New construction: Biomass Stove
+### New construction from 0.3.27: Biomass Stove
 
 Available from the beginning of multiplayer survival, the Biomass Stove is a self-contained appliance with an internal power supply. Add biomass fuel and the recipe ingredients, then queue production of dried fruitage, dried meat or purified water. No external power grid or unlocked Fabricator is required.
 
@@ -37,9 +44,9 @@ Available from the beginning of multiplayer survival, the Biomass Stove is a sel
   <img src="docs/images/biomass-stove-production.jpg" alt="Biomass Stove producing purified water with another batch queued" width="350">
 </p>
 
-### Manager 0.1.27
+### Manager 0.1.28
 
-The Manager includes client and dedicated server 0.3.27, an expanded two-column server settings interface, per-world gameplay configuration and three pre-generated starter worlds with different terrain settings. See [Manager controls](docs/MANAGER.md) and [starter worlds](docs/SERVER.md#included-starter-worlds).
+The Manager ships the 0.3.30 client and dedicated server payloads, along with separate client/server installation and per-world gameplay settings. **Known display issue:** this Manager build may still show 0.3.27 for both packaged components because its version labels are hardcoded. The version reporting will be corrected in the next scheduled update; see [issue #24](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/issues/24). See [Manager controls](docs/MANAGER.md) and [starter worlds](docs/SERVER.md#included-starter-worlds).
 
 > **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
 
