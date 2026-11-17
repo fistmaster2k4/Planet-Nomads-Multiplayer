@@ -20,9 +20,9 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 - **Driven and undriven cockpit occupants:** Players seated in either type of cockpit are represented to other clients, including stationary vehicles, late joiners and cockpit exits.
 - **Either empty cockpit works:** With two empty adjacent rounded cockpits, either can be occupied. Seated presentation follows the cockpit's actual occupancy event and native seat pivot, rather than assuming one fixed passenger-only presentation position. This does not change who controls the vehicle: driving authority and physics leasing remain separate.
 - **Manager 0.1.28:** Avoids attempting automatic profile backups while another Planet Nomads client is still running against the same LocalLow profile database. Normal backup can proceed after the final client closes.
-
+<p align="center">
 <img width="787" height="373" alt="Screenshot 2026-11-17 192238" src="https://github.com/user-attachments/assets/d7eeab0a-32b4-49e6-bc69-a193d0a8011c" />
-
+</p>
 ### Also included from previous releases
 
 - Player respawning on death, with selection of available drop pods and Cryopods.
