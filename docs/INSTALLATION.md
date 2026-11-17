@@ -40,6 +40,10 @@ BepInEx and TNet have loaded and connected under Proton on Steam Deck, but multi
 
 **Dedicated-server hosting is Windows-only.** The standalone ZIP contains the client, not the server.
 
+## Blueprint sharing (Steam and GOG)
+
+The Replicator exports blueprints into the local `UserConstructions` folder on both Steam and GOG. You can ZIP and share the complete numbered blueprint folder without Steam Workshop. See [Blueprint sharing instructions](BLUEPRINTS.md) for the folder location and an example using the Multiplayer Rover.
+
 ## Updates and removal
 
 > **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
