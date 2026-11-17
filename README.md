@@ -23,6 +23,7 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 <p align="center">
 <img width="787" height="373" alt="Screenshot 2026-11-17 192238" src="https://github.com/user-attachments/assets/d7eeab0a-32b4-49e6-bc69-a193d0a8011c" />
 </p>
+
 ### Also included from previous releases
 
 - Player respawning on death, with selection of available drop pods and Cryopods.
