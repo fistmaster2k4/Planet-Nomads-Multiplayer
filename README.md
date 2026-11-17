@@ -79,6 +79,7 @@ The Manager ships the 0.3.30 client and dedicated server payloads, along with se
 ## Get started
 
 - [Installation instructions — manager or standalone client](docs/INSTALLATION.md)
+- [Sharing blueprints between Steam and GOG](docs/BLUEPRINTS.md)
 - [Dedicated server and custom worlds](docs/SERVER.md)
 - [Manager controls](docs/MANAGER.md)
 - [Releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases)
