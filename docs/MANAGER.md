@@ -1,4 +1,4 @@
-# Multiplayer Manager 0.1.28
+# Multiplayer Manager 0.1.29
 
 ## INSTALL
 
@@ -7,11 +7,9 @@
 
 Choose **INSTALL CLIENT** for the Planet Nomads game folder or **INSTALL SERVER** for a dedicated-server destination. Only the selected component and its path are required.
 
-The manager detects each installed component separately. **UPDATE CLIENT** and **UPDATE SERVER** appear when a newer version or payload revision is available. Installing or updating one component leaves the other unchanged.
+The manager detects each installed component separately. **UPDATE CLIENT** and **UPDATE SERVER** appear when the packaged version or managed payload requires updating. It also recognises files changed or upgraded outside the Manager; both independent update paths have been tested with 0.1.29. Installing or updating one component leaves the other unchanged.
 
-The Manager 0.1.28 installer includes multiplayer client **0.3.30** and dedicated server **0.3.30**. Update both components when moving to this release. Existing worlds and live server configuration are preserved during server updates.
-
-> **Known issue (0.1.28):** The Manager can incorrectly display client and server version **0.3.27** despite packaging **0.3.30** binaries. The version labels are currently hardcoded. This is documented in [issue #24](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/issues/24) and is **to be fixed in the next scheduled update**; no emergency rebuild of 0.1.28 is planned. The inaccurate version metadata may also affect the Manager's upgrade prompts. When checking an installation, verify the actual deployed files.
+The Manager 0.1.29 installer includes multiplayer client **0.3.34** and dedicated server **0.3.34**. Update both components when moving to this release. Existing worlds and live server configuration are preserved during server updates.
 
 > **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
 
@@ -71,13 +69,15 @@ Launches the original Planet Nomads game. The manager stays open on the same pag
 - **GAME ARGUMENTS** — additional game launch options.
 - **BACKUP PROFILE** and **RESTORE PROFILE** — back up your saves and multiplayer identity.
 
-### Automatic profile backups in 0.1.28
+### Automatic profile backups in 0.1.29
 
-When the Manager launches a Planet Nomads client and automatic profile backup is enabled, it normally backs up the shared player profile after that client exits. **0.1.28 skips the automatic profile backup if another `PlanetNomads.exe` client is still running**, reducing collisions with locked files in the shared `AppData\LocalLow\Craneballs\PlanetNomads` profile (including `Saves\_main.db`). Once the last managed client exits, its normal automatic backup can proceed. This is separate from dedicated-server world backups.
+When the Manager launches a Planet Nomads client and automatic profile backup is enabled, it normally backs up the shared player profile after that client exits. **0.1.29 skips the automatic profile backup if another `PlanetNomads.exe` client is still running**, reducing collisions with locked files in the shared `AppData\LocalLow\Craneballs\PlanetNomads` profile (including `Saves\_main.db`). Once the last managed client exits, its normal automatic backup can proceed. This is separate from dedicated-server world backups.
 
-### Multiplayer 0.3.30 bundled improvements
+### Multiplayer 0.3.34 bundled improvements
 
-The included client and server deliver improved live server-clock synchronisation and shared sky progression, plus seated-player presentation in driven and undriven cockpits. Two empty adjacent rounded cockpits can both be used: when one becomes occupied, remote clients display the player at that cockpit's native seat pivot. Seated appearance does not grant driving or physics authority; those remain separate multiplayer controls. See the [main README](../README.md#whats-new-in-0330) for the release summary.
+Client and server **0.3.34** add shared-world support for the automated **Biomass Miner**, using native terrain-contact checks for operation and displaying drilling progress, estimated yield and harvested output.
+
+This release also fixes multiplayer respawning and vehicle logout behaviour, and simplifies the pause menu to **Continue**, **Options** and **Logout**, so leaving a session no longer exits the game. See [What's new in 0.3.34](../README.md#whats-new-in-0334).
 
 ## Sharing blueprints
 
