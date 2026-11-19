@@ -2,25 +2,27 @@
 
 ![SERVER screen](images/server.jpg)
 
-The current bundled dedicated server is **v0.3.30**, compatible with multiplayer client **v0.3.30**, supplied with Manager **0.1.28**. Update both client and server together.
-
-> **Manager 0.1.28 display issue:** The Manager may incorrectly report bundled client/server version **0.3.27**, despite shipping 0.3.30 deployables. This is documented in [issue #24](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/issues/24) and is scheduled for correction in the next Manager update.
+The current bundled dedicated server is **v0.3.34**, compatible with multiplayer client **v0.3.34**, supplied with Manager **0.1.29**. Update both client and server together.
 
 > **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
 
 Dropped items now use server-owned shared state. Either connected player can see and collect an item dropped by another player (verified in-game). Partial pickups, concurrent collection safeguards, reconnect/late-join recovery and restart persistence passed automated regression tests; full in-game verification of those edge cases is still pending.
 
-World time is owned by the dedicated server. In 0.3.30, joining and reconnecting players must receive and apply a fresh live server-clock reply before loading completes; connected clients then advance their sky phase at the same rate rather than applying different local sun-angle speed multipliers. The server manages independent weather schedules for the game's 25 biome profiles. Client-side sky, shelter and atmospheric rendering remain native.
+World time is owned by the dedicated server. Joining and reconnecting players must receive and apply a fresh live server-clock reply before loading completes; connected clients then advance their sky phase at the same rate rather than applying different local sun-angle speed multipliers. The server manages independent weather schedules for the game's 25 biome profiles. Client-side sky, shelter and atmospheric rendering remain native.
 
 ## Multiplayer gameplay
 
 The server coordinates player respawning, shared sleeping, vehicle physics authority, electrical connections and battery state. Sleeping requires all connected players to agree, using Sleeping Bags or powered Cryopods. Vehicle physics authority can move between players while vehicle and electrical state remain shared.
 
-The Biomass Stove is available from starting technology in multiplayer. It uses its own biomass-fuelled power supply to produce dried fruitage, dried meat and purified water. See the [0.3.30 feature overview](../README.md#whats-new-in-0330).
+The Biomass Stove is available from starting technology in multiplayer. It uses its own biomass-fuelled power supply to produce dried fruitage, dried meat and purified water. See the [Biomass Stove description](../README.md#new-construction-from-0327-biomass-stove).
 
-### Vehicle cockpit occupants in 0.3.30
+### Vehicle cockpit occupants (introduced in 0.3.30)
 
 Seated-player presentation now covers **both driven and undriven cockpits**, including stationary vehicles and players joining later. When two adjacent rounded cockpits are empty, **either can be occupied**: the remote seated representation follows the cockpit that actually reports occupancy and its native seat pivot. The server/client driver-admission and vehicle physics-leasing rules remain separate; being shown in a seat does not grant vehicle driving authority.
+
+### Biomass Miner in 0.3.34
+
+The automated Biomass Miner now works in shared multiplayer worlds. Position it in contact with terrain, supply power and monitor its drilling progress, hourly yield and output in its inventory interface. The miner uses the game's existing terrain-placement checks to establish terrain contact. Its native interface also provides an option to use connected containers when full. See [What's new in 0.3.34](../README.md#whats-new-in-0334).
 
 ## Included starter worlds
 
@@ -68,7 +70,7 @@ The **SERVER** screen lets you choose:
 
 The **World / Gameplay Configuration** section also provides per-world settings for game mode, day/night cycle length, night speed, day slowdown, player attributes, mining-machine excavation, gathering multiplier, animal nest density, bad weather reduction, aggressive animals, aggressive flora and weather. See [Manager gameplay configuration](MANAGER.md#world--gameplay-configuration) for details and the Creative mode warning.
 
-![World gameplay settings in Manager 0.1.28](images/manager-world-settings.jpg)
+![World gameplay settings in Manager 0.1.29](images/manager-world-settings.jpg)
 
 Click **SAVE SETTINGS** when finished. Restart the server to load the saved settings if it is running.
 
