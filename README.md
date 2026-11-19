@@ -18,8 +18,6 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 ### Biomass Miner — multiplayer automation
 
-The new miner is pictured operating in-world, with its drilling and output inventory screens shown in the release screenshots.
-
 The **Biomass Miner** is now supported in multiplayer. Place it where it makes contact with the terrain and power it to produce organic matter automatically. The miner uses the game's existing terrain-placement detection to establish valid ground contact, rather than a costly new terrain scan.
 
 Production and its output container can be used in a shared multiplayer world. Its interface shows drilling progress, estimated hourly yield and harvested material. It also offers the native option to use connected containers when its internal storage is full.
