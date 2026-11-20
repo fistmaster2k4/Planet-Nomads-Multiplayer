@@ -20,6 +20,9 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 <p align="center">
 <img width="1429" height="816" alt="Screenshot 2026-11-19 134914" src="https://github.com/user-attachments/assets/76db284e-6189-4631-8310-cec3132687b4" />
+
+<img width="895" height="452" alt="Screenshot 2026-11-19 130249" src="https://github.com/user-attachments/assets/e3c5cd67-5149-4119-ac67-d74db4122626" />
+
 </p>
 
 The **Biomass Miner** is now supported in multiplayer. Place it where it makes contact with the terrain and power it to produce organic matter automatically. The miner uses the game's existing terrain-placement detection to establish valid ground contact, rather than a costly new terrain scan.
