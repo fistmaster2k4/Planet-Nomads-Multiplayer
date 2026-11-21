@@ -1,4 +1,4 @@
-# Multiplayer Manager 0.1.29
+# Multiplayer Manager 0.1.30
 
 ## INSTALL
 
@@ -7,9 +7,9 @@
 
 Choose **INSTALL CLIENT** for the Planet Nomads game folder or **INSTALL SERVER** for a dedicated-server destination. Only the selected component and its path are required.
 
-The manager detects each installed component separately. **UPDATE CLIENT** and **UPDATE SERVER** appear when the packaged version or managed payload requires updating. It also recognises files changed or upgraded outside the Manager; both independent update paths have been tested with 0.1.29. Installing or updating one component leaves the other unchanged.
+The manager detects each installed component separately. **UPDATE CLIENT** and **UPDATE SERVER** appear when the packaged version or managed payload requires updating. It also recognises files changed or upgraded outside the Manager. Installing or updating one component leaves the other unchanged.
 
-The Manager 0.1.29 installer includes multiplayer client **0.3.34** and dedicated server **0.3.34**. Update both components when moving to this release. Existing worlds and live server configuration are preserved during server updates.
+The Manager 0.1.30 installer includes multiplayer client **0.3.36** and dedicated server **0.3.36**. Update both components when moving to this release. Existing worlds and live server configuration are preserved during server updates.
 
 > **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
 
@@ -60,6 +60,11 @@ Buttons: **LAUNCH SERVER**, **SAVE**, **SHUTDOWN**, **RESTART**.
 
 Launches the original Planet Nomads game. The manager stays open on the same page so you can watch server activity on another monitor.
 
+- **Steam installation:** Launches through Steam, retaining the Steam overlay and Steam Workshop blueprint access.
+- **GOG installation:** Launches `PlanetNomads.exe` directly.
+
+Use the Manager's configured client installation to launch the appropriate copy of the game.
+
 ## OPTIONS
 
 ![OPTIONS screen](images/options.jpg)
@@ -68,17 +73,35 @@ Launches the original Planet Nomads game. The manager stays open on the same pag
 - **WORLD BACKUPS** — automatic or manual.
 - **GAME ARGUMENTS** — additional game launch options.
 - **BACKUP PROFILE** and **RESTORE PROFILE** — back up your saves and multiplayer identity.
+- **REPORT BUG** — collect game and server diagnostics into a ZIP for a GitHub issue.
 
-### Automatic profile backups in 0.1.29
+### Automatic profile backups
 
-When the Manager launches a Planet Nomads client and automatic profile backup is enabled, it normally backs up the shared player profile after that client exits. **0.1.29 skips the automatic profile backup if another `PlanetNomads.exe` client is still running**, reducing collisions with locked files in the shared `AppData\LocalLow\Craneballs\PlanetNomads` profile (including `Saves\_main.db`). Once the last managed client exits, its normal automatic backup can proceed. This is separate from dedicated-server world backups.
+When the Manager launches a Planet Nomads client and automatic profile backup is enabled, it normally backs up the shared player profile after that client exits. **The Manager skips the automatic profile backup if another `PlanetNomads.exe` client is still running**, reducing collisions with locked files in the shared `AppData\LocalLow\Craneballs\PlanetNomads` profile (including `Saves\_main.db`). Once the last managed client exits, its normal automatic backup can proceed. This is separate from dedicated-server world backups.
 
-### Multiplayer 0.3.34 bundled improvements
+### Report Bug
+
+Under **OPTIONS → PLAYER PROFILE**, select **REPORT BUG** to collect information for a GitHub issue.
+
+1. Choose where to save `NomadsBugReport.zip`. The default location is the dedicated-server installation folder.
+2. The Manager packages available BepInEx client logs, dedicated-server logs, Unity `Player.log` files and the installed Manager, client and server versions.
+3. A confirmation tells you where the ZIP was saved and the Manager opens the project's GitHub issue tracker.
+4. Describe the problem in a new issue and attach the saved ZIP.
+
+World saves and databases are not included. **Review the diagnostic files before sharing them publicly**: logs can include IP addresses, computer paths and other session information.
+
+### Multiplayer client/server 0.3.36 bundled improvements
+
+Replicator-printed vehicles and structures, including Steam Workshop blueprints, are registered with the dedicated server so they persist through player disconnects and reconnects. The replication covers child grids, suspension assemblies, electrical connections and component settings, and resolves cockpit interaction problems on printed vehicles.
+
+A Steam-built Workshop rover has been confirmed visible and usable from a GOG client in the same world. A short delay after printing may occur while the construction is handed off to the server and settles.
+
+### Earlier improvements from 0.3.34
 
 Client and server **0.3.34** add shared-world support for the automated **Biomass Miner**, using native terrain-contact checks for operation and displaying drilling progress, estimated yield and harvested output.
 
-This release also fixes multiplayer respawning and vehicle logout behaviour, and simplifies the pause menu to **Continue**, **Options** and **Logout**, so leaving a session no longer exits the game. See [What's new in 0.3.34](../README.md#whats-new-in-0334).
+This release also fixes multiplayer respawning and vehicle logout behaviour, and simplifies the pause menu to **Continue**, **Options** and **Logout**, so leaving a session no longer exits the game. See [the 0.3.34 notes](../README.md#previous-release-0334) and [the current 0.3.36 update](../README.md#whats-new-in-0336).
 
 ## Sharing blueprints
 
-Steam and GOG players can exchange locally exported Replicator constructions by ZIPping the numbered blueprint folder and extracting it into the recipient's `UserConstructions` directory. See [Blueprint sharing](BLUEPRINTS.md) for instructions and the Multiplayer Rover example.
+Steam and GOG players can exchange locally exported Replicator constructions by ZIPping the numbered blueprint folder and extracting it into the recipient's `UserConstructions` directory. With client/server 0.3.36, structures printed through the native Replicator are synchronised and persisted by the dedicated server, including Steam Workshop blueprints. See [Blueprint sharing](BLUEPRINTS.md) for instructions and the Multiplayer Rover example.
