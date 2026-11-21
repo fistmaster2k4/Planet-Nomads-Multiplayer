@@ -30,7 +30,9 @@ A Steam player can print a Workshop vehicle and a GOG player joining the same de
 
 **PLAY GAME** now starts Steam installations through Steam, retaining Steam Workshop access and the Steam overlay. GOG installations continue to launch the game executable directly.
 
-The **OPTIONS → PLAYER PROFILE → REPORT BUG** control creates `NomadsBugReport.zip` containing available client, dedicated-server and native game logs plus installed version information. It lets you choose a save location (defaulting to the dedicated-server folder), shows where the file was saved and opens the GitHub issue tracker. World saves and databases are excluded. **Review logs before posting publicly**, as they can contain IP addresses or local file paths.
+The **OPTIONS → PLAYER PROFILE → REPORT BUG** control creates `NomadsBugReport.zip` containing available client, dedicated-server and native game logs plus installed version information. It lets you choose a save location (defaulting to the dedicated-server folder), shows where the file was saved and opens the GitHub issue tracker. World saves and databases are excluded. 
+
+<img width="807" height="602" alt="Screenshot 2026-11-21 192637" src="https://github.com/user-attachments/assets/a9fdd2c1-3c40-4c69-b157-2a3458c0d837" />
 
 Manager 0.1.30 bundles client and dedicated server **0.3.36**.
 
