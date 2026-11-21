@@ -10,11 +10,31 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 | Component | Version |
 | --- | --- |
-| Multiplayer Manager | **0.1.29** |
-| Multiplayer client mod | **0.3.34** |
-| Dedicated server | **0.3.34** |
+| Multiplayer Manager | **0.1.30** |
+| Multiplayer client mod | **0.3.36** |
+| Dedicated server | **0.3.36** |
 
-## What's new in 0.3.34
+## What's new in 0.3.36
+
+### Replicator blueprints now persist in multiplayer
+
+Constructions printed through the game's native **Replicator** are registered with the dedicated server, including locally saved and Steam Workshop blueprints. Printed structures and vehicles remain in the shared world when players disconnect and reconnect.
+
+Registration includes generated child grids, suspension assemblies, electrical connections and functional component settings. The update also resolves cockpit authority problems affecting newly printed vehicles and supports blueprints whose components are offset from the root coordinate.
+
+A Steam player can print a Workshop vehicle and a GOG player joining the same dedicated server can see and use it. This cross-platform behaviour and reconnect persistence have been verified in-game.
+
+> **Note:** Players may experience a short delay after printing a Steam Workshop blueprint while the construction is handed off to the server. The vehicle may take time to settle and become interactive.
+
+### Manager 0.1.30
+
+**PLAY GAME** now starts Steam installations through Steam, retaining Steam Workshop access and the Steam overlay. GOG installations continue to launch the game executable directly.
+
+The **OPTIONS → PLAYER PROFILE → REPORT BUG** control creates `NomadsBugReport.zip` containing available client, dedicated-server and native game logs plus installed version information. It lets you choose a save location (defaulting to the dedicated-server folder), shows where the file was saved and opens the GitHub issue tracker. World saves and databases are excluded. **Review logs before posting publicly**, as they can contain IP addresses or local file paths.
+
+Manager 0.1.30 bundles client and dedicated server **0.3.36**.
+
+## Previous release: 0.3.34
 
 ### Biomass Miner — multiplayer automation
 
@@ -34,10 +54,6 @@ Production and its output container can be used in a shared multiplayer world. I
 - **Respawning:** Corrected problems with multiplayer death and respawn handling.
 - **Logging out of vehicles:** Occupied vehicles are exited correctly on player logout, avoiding the previously observed death-on-logout behaviour.
 - **In-game pause menu:** Simplified to **Continue**, **Options** and **Logout**. Logout now returns from the multiplayer session without closing the entire game.
-
-### Manager 0.1.29
-
-Manager **0.1.29** includes **client and dedicated server 0.3.34**. Its installer/update flow now correctly detects client and server files modified or upgraded outside the Manager and can update each component independently. Both paths have been tested successfully.
 
 ### Also included from previous releases
 
@@ -62,13 +78,13 @@ Available from the beginning of multiplayer survival, the Biomass Stove is a sel
   <img src="docs/images/biomass-stove-production.jpg" alt="Biomass Stove producing purified water with another batch queued" width="350">
 </p>
 
-### Manager 0.1.29
+### Manager installation and world controls
 
-The Manager packages client and dedicated server **0.3.34**, with independent installation and update controls and per-world gameplay settings. Its component version detection and update handling were verified against files changed outside the Manager. See [Manager controls](docs/MANAGER.md) and [starter worlds](docs/SERVER.md#included-starter-worlds).
+The Manager provides independent client and dedicated-server installation and update controls, plus per-world gameplay settings. It recognises managed files changed outside the Manager and supports updating either component separately. See [Manager controls](docs/MANAGER.md) and [starter worlds](docs/SERVER.md#included-starter-worlds).
 
 > **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
 
-## Working and tested
+## Multiplayer features
 
 - Windows installer, desktop icon and Start Menu shortcut.
 - Independent client and dedicated-server installation and updates, with confirmation and backups for modified files.
@@ -78,11 +94,11 @@ The Manager packages client and dedicated server **0.3.34**, with independent in
 - Server-owned weather schedules for the game's 25 biome profiles.
 - Remote players' flashlights illuminate the environment at night, with on/off state synchronised to other clients.
 - Dropped items appear at shared positions for connected players and can be collected by either player (verified in-game).
-- Server-owned dropped-item state supports partial pickups, late joiners and restart recovery (automated regression tests passed; broader in-game verification ongoing).
+- Server-owned dropped-item state supports partial pickups, late joiners and restart recovery (broader in-game verification ongoing).
 - Original single-player game modes and menus remain available.
 - Custom world loading from the dedicated server.
 - Persistent player identity and configured server administrator recognition.
-- Game launch from the manager, with the server console left visible.
+- Game launch from the manager, with the server console left visible. Steam installations launch through Steam; GOG installations launch directly.
 
 ## Current limitations
 
