@@ -67,7 +67,8 @@ Use the Manager's configured client installation to launch the appropriate copy 
 
 ## OPTIONS
 
-![OPTIONS screen](images/options.jpg)
+![OPTIONS screen](<img width="807" height="602" alt="Screenshot 2026-11-21 192637" src="https://github.com/user-attachments/assets/fcd72189-4047-4b44-9c37-bb92160415b0" />)
+
 
 - **LAUNCHER MUSIC** and **UI SFX** — sound on/off.
 - **WORLD BACKUPS** — automatic or manual.
@@ -88,7 +89,7 @@ Under **OPTIONS → PLAYER PROFILE**, select **REPORT BUG** to collect informati
 3. A confirmation tells you where the ZIP was saved and the Manager opens the project's GitHub issue tracker.
 4. Describe the problem in a new issue and attach the saved ZIP.
 
-World saves and databases are not included. **Review the diagnostic files before sharing them publicly**: logs can include IP addresses, computer paths and other session information.
+World saves and databases are not included.
 
 ### Multiplayer client/server 0.3.36 bundled improvements
 
