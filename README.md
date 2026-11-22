@@ -19,15 +19,24 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 ## What's new in 0.3.43
 
 ### New: Terraformer
+<p align="center">
+<img width="808" height="695" alt="Screenshot 2026-11-22 081554" src="https://github.com/user-attachments/assets/837cd1ee-12d1-4736-9ad1-7b5c9244caf3" />
+</p>
 
 The **Terraformer** restores trees you've previously harvested within a **100-metre radius**, using technology related to the huge planetary devices aboard your lost ship, originally intended for world colonisation.
 
 It unlocks alongside the **Nuclear Generator** and requires substantial electrical power — at least a nuclear generator.
+<p align="center">
+<img width="541" height="142" alt="Screenshot 2026-11-22 081614" src="https://github.com/user-attachments/assets/699740a7-9d25-48e7-be68-32d13734a764" />
+</p>
 
 - Each restored tree requires **1 seed and 5 biomass**, placed in the Terraformer or connected storage containers.
 - Each tree takes **two in-game days** to restore, based on the server world's configured day length.
 - The machine shows restoration progress and remaining time, and preserves progress through server restarts.
 - Once all eligible trees in its area are regrown, the machine stops consuming power.
+<p align="center">
+  <img width="580" height="840" alt="Screenshot 2026-11-22 075226" src="https://github.com/user-attachments/assets/bd49bcd9-6619-4471-b4cb-042dcd709ac6" />
+</p>
 
 **Overlapping Terraformers prevent each other from operating — spacing is vital!**
 
