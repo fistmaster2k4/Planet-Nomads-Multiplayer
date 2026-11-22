@@ -1,19 +1,23 @@
 # Sharing Blueprints — Steam and GOG
 
+**Compatibility: Planet Nomads Multiplayer supports vanilla Planet Nomads 1.0.7.2 only (Steam or GOG). Wand and imported custom blueprints that overwrite existing block IDs are not supported.**
+
 Planet Nomads can export construction blueprints locally through the **Replicator**, including on GOG. Steam Workshop publishing is optional: the local blueprint folder can be shared directly.
 
-## Printing blueprints in multiplayer — 0.3.36
+## Printing blueprints in multiplayer — 0.3.43
 
-With matching multiplayer client and dedicated server **0.3.36**, the game's native Replicator registers printed constructions with the dedicated server, including blueprints saved locally and those obtained from Steam Workshop.
+With matching multiplayer client and dedicated server **0.3.43**, the game's native Replicator registers printed constructions with the dedicated server, including blueprints saved locally and those obtained from Steam Workshop.
 
 - Printed vehicles and structures persist when players disconnect and reconnect.
 - Generated child grids, suspension assemblies, electrical connections and functional component settings are included in construction synchronisation.
 - Steam players can print Workshop constructions that GOG players can see and use when connected to the same dedicated server.
 - Newly printed vehicles can take a short time to settle and become interactive while the construction is handed off to the server.
 
-**Steam Workshop access:** If launching the Steam version through **Multiplayer Manager 0.1.30**, use **PLAY GAME**. It launches through Steam so that the game's native Steam integration and Workshop library are available. The Manager launches GOG installations directly through the game executable.
+**Steam Workshop access:** If launching the Steam version through **Multiplayer Manager 0.1.31**, use **PLAY GAME**. It launches through Steam so that the game's native Steam integration and Workshop library are available. The Manager launches GOG installations directly through the game executable.
 
 Steam Workshop access is not needed to use locally shared blueprint folders.
+
+**Custom blueprints that overwrite the properties of existing game block IDs are not supported.**
 
 ## Local blueprint directory
 
