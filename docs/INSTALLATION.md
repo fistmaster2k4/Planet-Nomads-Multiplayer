@@ -1,10 +1,12 @@
 # Installation
 
-## Windows — Multiplayer Manager 0.1.29
+**Compatibility: Planet Nomads Multiplayer supports vanilla Planet Nomads 1.0.7.2 only (Steam or GOG). Wand and imported custom blueprints that overwrite existing block IDs are not supported.**
+
+## Windows — Multiplayer Manager 0.1.31
 
 ![INSTALL screen](images/install.jpg)
 
-1. Download the **0.1.29 Manager installer** from [GitHub Releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) and run the setup executable.
+1. Download the **0.1.31 Manager installer** from [GitHub Releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) and run the setup executable.
 2. Open **Planet Nomads Multiplayer Manager** using its desktop icon or Start Menu shortcut.
 3. Under **INSTALL**, choose the component you want:
    - **INSTALL CLIENT** — select your existing Planet Nomads game folder (containing `PlanetNomads.exe`), enter your player name, then install.
@@ -19,9 +21,9 @@ Three ready-to-play starter worlds are included: Day1, Day2 and Day3. See [start
 
 ## Standalone client — manual installation
 
-The [standalone client releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) provide the client without the Manager. Choose the **0.3.34 Standalone Client** package. A matching **0.3.34 dedicated server** is required.
+The [standalone client releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) provide the client without the Manager. Choose the **0.3.43 Standalone Client** package. A matching **0.3.43 dedicated server** is required.
 
-1. Download `Planet Nomads Client 0.3.34.zip` from the 0.3.34 standalone client release.
+1. Download the standalone client ZIP from the **0.3.43 Standalone Client** release.
 2. Open the Planet Nomads installation folder containing `PlanetNomads.exe`.
 3. Extract the ZIP **directly into that folder**, preserving its directory structure. It includes BepInEx, the matching multiplayer and TNet plugins, configuration files, Doorstop, `winhttp.dll`, and the `version.txt` file required for game version 1.0.7.2 compatibility (including GOG installations).
 4. Launch the game and select **Multiplayer** on the main menu.
@@ -55,8 +57,8 @@ The INSTALL screen has separate client and server destinations. Once a component
 
 - The manager detects the client and server independently. **UPDATE CLIENT** or **UPDATE SERVER** appears when the included version is newer than the installed component.
 - Updating one component leaves the other unchanged.
-- If managed files have changed outside the Manager, the Manager detects those changes and handles confirmation and backup before replacement. Both client and server upgrade paths were verified with 0.1.29.
-- **Manager 0.1.29 includes client and dedicated server 0.3.34.** Update both components for this release; older clients and servers are not supported as a matching pair.
+- If managed files have changed outside the Manager, the Manager detects those changes and handles confirmation and backup before replacement. 
+- **Manager 0.1.31 includes client and dedicated server 0.3.43.** Update both components for this release; older clients and servers are not supported as a matching pair.
 - Server updates preserve existing worlds and live server configuration.
 - **UNINSTALL** removes manager-managed client/server files while preserving saved worlds and unrelated files. Modified managed files may be retained.
 - Windows **Uninstall** removes the manager application and shortcuts.
@@ -65,6 +67,6 @@ The INSTALL screen has separate client and server destinations. Once a component
 
 Under **OPTIONS**, use **BACKUP PROFILE** to save your player configuration, local saves and multiplayer identity. **RESTORE PROFILE** restores that backup.
 
-With Manager 0.1.29, automatic profile backup is skipped when another `PlanetNomads.exe` client is still running and may be holding shared profile files open. Normal automatic backup is attempted when the final managed client exits. Dedicated-server world backups are separate.
+With Manager 0.1.31, automatic profile backup is skipped when another `PlanetNomads.exe` client is still running and may be holding shared profile files open. Normal automatic backup is attempted when the final managed client exits. Dedicated-server world backups are separate.
 
 **Keep profile backup ZIPs private.** They contain the identity information used by your multiplayer character.
