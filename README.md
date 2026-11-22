@@ -6,35 +6,61 @@
 
 Play the original Planet Nomads with a multiplayer client mod, a dedicated server and a Windows manager to install and control them.
 
+**Compatibility: Planet Nomads Multiplayer supports vanilla Planet Nomads 1.0.7.2 only (Steam or GOG). Wand and imported custom blueprints that overwrite existing block IDs are not supported.**
+
 ## Included
 
 | Component | Version |
 | --- | --- |
-| Multiplayer Manager | **0.1.30** |
-| Multiplayer client mod | **0.3.36** |
-| Dedicated server | **0.3.36** |
+| Multiplayer Manager | **0.1.31** |
+| Multiplayer client mod | **0.3.43** |
+| Dedicated server | **0.3.43** |
 
-## What's new in 0.3.36
+## What's new in 0.3.43
 
-### Replicator blueprints now persist in multiplayer
+### New: Terraformer
 
-Constructions printed through the game's native **Replicator** are registered with the dedicated server, including locally saved and Steam Workshop blueprints. Printed structures and vehicles remain in the shared world when players disconnect and reconnect.
+The **Terraformer** restores trees you've previously harvested within a **100-metre radius**, using technology related to the huge planetary devices aboard your lost ship, originally intended for world colonisation.
 
-Registration includes generated child grids, suspension assemblies, electrical connections and functional component settings. The update also resolves cockpit authority problems affecting newly printed vehicles and supports blueprints whose components are offset from the root coordinate.
+It unlocks alongside the **Nuclear Generator** and requires substantial electrical power — at least a nuclear generator.
 
-A Steam player can print a Workshop vehicle and a GOG player joining the same dedicated server can see and use it. This cross-platform behaviour and reconnect persistence have been verified in-game.
+- Each restored tree requires **1 seed and 5 biomass**, placed in the Terraformer or connected storage containers.
+- Each tree takes **two in-game days** to restore, based on the server world's configured day length.
+- The machine shows restoration progress and remaining time, and preserves progress through server restarts.
+- Once all eligible trees in its area are regrown, the machine stops consuming power.
 
-> **Note:** Players may experience a short delay after printing a Steam Workshop blueprint while the construction is handed off to the server. The vehicle may take time to settle and become interactive.
+**Overlapping Terraformers prevent each other from operating — spacing is vital!**
+
+### Shared quests, journals and lore
+
+- Quest objectives and completed quests are now shared across the server.
+- Completed quests and journal entries persist through reconnects and server restarts.
+- Discovered story logs and lore entries remain available to every player, including late joiners.
+- Shared technology unlocks continue to work as before.
+
+### Fixes and improvements
+
+- Fixed harvested rocks and plants leaving remnants behind.
+- Restored the **Biomass Stove** to starting build options.
+- Fixed construction checkpoint errors preventing players from rejoining existing worlds.
+- Corrected Terraformer timers and added progress and pause-status displays.
+- Improved the Manager's detection of running dedicated servers, preventing duplicate launches and allowing world settings to be edited when the server stops.
+
+**Manager 0.1.31 includes matching multiplayer client and dedicated server 0.3.43.** Update both components together.
+
+## Previous release: 0.3.36
+
+### Replicator blueprint persistence
+
+Constructions printed with the game's native **Replicator**, including locally saved and Steam Workshop blueprints, are registered with the dedicated server and remain in the world after reconnecting. Printed vehicles and structures retain their child grids, suspension, electrical connections and component settings. Steam players can print Workshop vehicles that GOG players can see and use.
+
+> Newly printed constructions may take a short time to settle before becoming interactive.
 
 ### Manager 0.1.30
 
-**PLAY GAME** now starts Steam installations through Steam, retaining Steam Workshop access and the Steam overlay. GOG installations continue to launch the game executable directly.
+**PLAY GAME** launches Steam installations through Steam for Workshop access; GOG installations launch directly. **OPTIONS → PLAYER PROFILE → REPORT BUG** packages available diagnostic logs and version information for a GitHub report.
 
-The **OPTIONS → PLAYER PROFILE → REPORT BUG** control creates `NomadsBugReport.zip` containing available client, dedicated-server and native game logs plus installed version information. It lets you choose a save location (defaulting to the dedicated-server folder), shows where the file was saved and opens the GitHub issue tracker. World saves and databases are excluded. 
-
-<img width="807" height="602" alt="Screenshot 2026-11-21 192637" src="https://github.com/user-attachments/assets/a9fdd2c1-3c40-4c69-b157-2a3458c0d837" />
-
-Manager 0.1.30 bundles client and dedicated server **0.3.36**.
+<img width="807" height="602" alt="Manager Report Bug option" src="https://github.com/user-attachments/assets/a9fdd2c1-3c40-4c69-b157-2a3458c0d837" />
 
 ## Previous release: 0.3.34
 
