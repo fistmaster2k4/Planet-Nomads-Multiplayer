@@ -4,7 +4,7 @@
 
 ![SERVER screen](images/server.jpg)
 
-The current bundled dedicated server is **0.3.59**, compatible with multiplayer client **0.3.59**, supplied with Manager **0.1.32**. Update both client and server together.
+The current bundled dedicated server is **0.3.60**, compatible with multiplayer client **0.3.60**, supplied with Manager **0.1.33**. Update both client and server together; older versions are not compatible with 0.3.60.
 
 > **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
 
@@ -17,6 +17,8 @@ Dropped items use server-owned shared state. Connected players can see and colle
 World time is owned by the dedicated server. Joining and reconnecting players must receive and apply a fresh live server-clock reply before loading completes; connected clients then advance their sky phase at the same rate rather than applying different local sun-angle speed multipliers. The server manages independent weather schedules for the game's 25 biome profiles. Client-side sky, shelter and atmospheric rendering remain native.
 
 ## Multiplayer gameplay
+
+Blocks relocated using the Moving Tool retain their new placement, inventory contents and machine settings. Custom block names and action keybindings are saved by the server and shared with joining players. These settings persist through reconnects and server restarts. Previously lost names and keybindings must be reassigned.
 
 The server maintains **shared quest objectives, completed quests, journals and discovered story logs** for everyone in the world, including returning and late-joining players.
 
