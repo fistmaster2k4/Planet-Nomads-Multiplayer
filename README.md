@@ -32,6 +32,7 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 Fixed excessive growth of the dedicated server's container database caused by unnecessary persistent inventory transaction records. Existing affected databases are automatically cleaned on server startup, retaining current inventory and machine state. No manual database maintenance is required.
 
 **Manager 0.1.32 includes matching multiplayer client and dedicated server 0.3.59.** Update both components together. This update is strongly recommended for existing servers.
+*Launch the server at least once on each of the server saves (Day1-3 + Any you've created) to cleanup the excessively bloated containers.db*
 
 ## Previous release: 0.3.43
 
