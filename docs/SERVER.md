@@ -4,9 +4,13 @@
 
 ![SERVER screen](images/server.jpg)
 
-The current bundled dedicated server is **0.3.43**, compatible with multiplayer client **0.3.43**, supplied with Manager **0.1.31**. Update both client and server together.
+The current bundled dedicated server is **0.3.59**, compatible with multiplayer client **0.3.59**, supplied with Manager **0.1.32**. Update both client and server together.
 
 > **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
+
+### Database maintenance in 0.3.59
+
+The server automatically cleans affected container databases on startup, removing unnecessary persistent inventory transaction records while retaining current inventory and machine state. The cause of excessive database growth has also been fixed. No manual database maintenance is required.
 
 Dropped items use server-owned shared state. Connected players can see and collect items dropped by other players, including partial stacks.
 
@@ -17,6 +21,8 @@ World time is owned by the dedicated server. Joining and reconnecting players mu
 The server maintains **shared quest objectives, completed quests, journals and discovered story logs** for everyone in the world, including returning and late-joining players.
 
 The **Terraformer** restores harvested trees within 100 metres, using electricity and **1 seed and 5 biomass per tree** from its own inventory or connected containers. It unlocks alongside the Nuclear Generator, requires nuclear-generator-level power and takes **two in-game days per tree** at the world's configured day length. Progress persists through server restarts; electricity consumption stops once trees in range are restored. **Overlapping Terraformers cannot operate.**
+
+In 0.3.59, routine countdown updates no longer perform obstruction checks. Restoration sites are validated when needed, and accumulated production progress is retained if no safe site is available. This reduces server processing overhead and improves inventory and vehicle responsiveness.
 
 
 The server coordinates player respawning, shared sleeping, vehicle physics authority, electrical connections and battery state. Sleeping requires all connected players to agree, using Sleeping Bags or powered Cryopods. Vehicle physics authority can move between players while vehicle and electrical state remain shared.
