@@ -25,6 +25,7 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 - Improved vehicle responsiveness by removing expensive recurring server-side Terraformer obstruction checks. Necessary obstruction checks were approximately 60 times faster across seven restoration sites in our test world.
 - Fixed Terraformer progress stalling following server restarts, overlay leakage into other machine interfaces and production queue icon alignment.
 - Build Vision now defaults to OFF when joining a multiplayer world.
+- Fixed players being ejected from vehicles.
 
 ### Container database maintenance
 
