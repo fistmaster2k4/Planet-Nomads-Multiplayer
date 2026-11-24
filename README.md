@@ -12,11 +12,26 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 | Component | Version |
 | --- | --- |
-| Multiplayer Manager | **0.1.32** |
-| Multiplayer client mod | **0.3.59** |
-| Dedicated server | **0.3.59** |
+| Multiplayer Manager | **0.1.33** |
+| Multiplayer client mod | **0.3.60** |
+| Dedicated server | **0.3.60** |
 
-## What's new in 0.3.59
+## What's new in 0.3.60
+
+### Moving Tool and object settings
+
+- Fixed blocks moved with the Moving Tool disappearing after reconnecting ([#35](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/issues/35)). Moved blocks retain their new position, orientation and existing settings, including inventory contents and machine production queues.
+- Custom block names and action keybindings are now saved by the server and shared between players ([#36](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/issues/36)).
+- Moved block positions, switch keybindings and custom names on switches, doors and printers have been verified through reconnects and server restarts.
+- Previously lost names and keybindings need to be reassigned.
+
+All stability, performance and automatic database maintenance improvements from 0.3.59 are retained.
+
+**Manager 0.1.33 includes matching multiplayer client and dedicated server 0.3.60.** Both must be updated together; older clients and servers are not compatible with 0.3.60.
+
+Thanks to Cuddly Robot for reporting both issues.
+
+## Previous release: 0.3.59
 
 ### Stability and performance
 
