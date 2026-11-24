@@ -12,11 +12,27 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 | Component | Version |
 | --- | --- |
-| Multiplayer Manager | **0.1.31** |
-| Multiplayer client mod | **0.3.43** |
-| Dedicated server | **0.3.43** |
+| Multiplayer Manager | **0.1.32** |
+| Multiplayer client mod | **0.3.59** |
+| Dedicated server | **0.3.59** |
 
-## What's new in 0.3.43
+## What's new in 0.3.59
+
+### Stability and performance
+
+- Improved inventory and machine interface responsiveness, including a fix for an interaction that could leave the cursor visible without opening the inventory.
+- Removed redundant inventory requests and accumulating callbacks.
+- Improved vehicle responsiveness by removing expensive recurring server-side Terraformer obstruction checks. Necessary obstruction checks were approximately 60 times faster across seven restoration sites in our test world.
+- Fixed Terraformer progress stalling following server restarts, overlay leakage into other machine interfaces and production queue icon alignment.
+- Build Vision now defaults to OFF when joining a multiplayer world.
+
+### Container database maintenance
+
+Fixed excessive growth of the dedicated server's container database caused by unnecessary persistent inventory transaction records. Existing affected databases are automatically cleaned on server startup, retaining current inventory and machine state. No manual database maintenance is required.
+
+**Manager 0.1.32 includes matching multiplayer client and dedicated server 0.3.59.** Update both components together. This update is strongly recommended for existing servers.
+
+## Previous release: 0.3.43
 
 ### New: Terraformer
 <p align="center">
