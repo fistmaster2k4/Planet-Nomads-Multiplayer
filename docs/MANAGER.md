@@ -1,4 +1,4 @@
-# Multiplayer Manager 0.1.33
+# Multiplayer Manager 0.1.34
 
 **Compatibility: Planet Nomads Multiplayer supports vanilla Planet Nomads 1.0.7.2 only (Steam or GOG). Wand and imported custom blueprints that overwrite existing block IDs are not supported.**
 
@@ -11,7 +11,7 @@ Choose **INSTALL CLIENT** for the Planet Nomads game folder or **INSTALL SERVER*
 
 The manager detects each installed component separately. **UPDATE CLIENT** and **UPDATE SERVER** appear when the packaged version or managed payload requires updating. It also recognises files changed or upgraded outside the Manager. Installing or updating one component leaves the other unchanged.
 
-The Manager 0.1.33 installer includes multiplayer client **0.3.60** and dedicated server **0.3.60**. Older clients and servers are not compatible with 0.3.60. Update both components when moving to this release. Existing worlds and live server configuration are preserved during server updates.
+The Manager 0.1.34 installer includes multiplayer client **0.3.62** and dedicated server **0.3.62**. Older clients and servers are not compatible with 0.3.62. Update both components when moving to this release. Existing worlds and live server configuration are preserved during server updates.
 
 > **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
 
@@ -93,7 +93,15 @@ Under **OPTIONS → PLAYER PROFILE**, select **REPORT BUG** to collect informati
 
 World saves and databases are not included.
 
-### Multiplayer client/server 0.3.60 bundled improvements
+### Multiplayer client/server 0.3.62 bundled improvements
+
+**Rotor settings:** Small and large flight rotors retain idle hover, stabilisation and forward/side steering settings between sessions, including configurations captured from Replicator blueprints.
+
+**Solar beacons:** Internal solar power works without external wiring. Navigation visibility, custom labels and selected icons persist.
+
+**Loading audio:** Gameplay audio is suppressed while joining a multiplayer world. Existing flight physics and vehicle controls are unchanged.
+
+### Previous: multiplayer client/server 0.3.60 improvements
 
 **Moving Tool:** Fixed relocated blocks disappearing after reconnecting. Moved blocks retain their new position, inventory contents and machine settings.
 
@@ -127,8 +135,8 @@ A Steam-built Workshop rover has been confirmed visible and usable from a GOG cl
 
 Client and server **0.3.34** add shared-world support for the automated **Biomass Miner**, using native terrain-contact checks for operation and displaying drilling progress, estimated yield and harvested output.
 
-This release also fixes multiplayer respawning and vehicle logout behaviour, and simplifies the pause menu to **Continue**, **Options** and **Logout**, so leaving a session no longer exits the game. See [the 0.3.34 notes](../README.md#previous-release-0334) and [the current 0.3.60 update](../README.md#whats-new-in-0360).
+This release also fixes multiplayer respawning and vehicle logout behaviour, and simplifies the pause menu to **Continue**, **Options** and **Logout**, so leaving a session no longer exits the game. See [the 0.3.34 notes](../README.md#previous-release-0334) and [the current 0.3.62 update](../README.md#whats-new-in-0362).
 
 ## Sharing blueprints
 
-Steam and GOG players can exchange locally exported Replicator constructions by ZIPping the numbered blueprint folder and extracting it into the recipient's `UserConstructions` directory. With client/server 0.3.60, structures printed through the native Replicator are synchronised and persisted by the dedicated server, including Steam Workshop blueprints. See [Blueprint sharing](BLUEPRINTS.md) for instructions and the Multiplayer Rover example.
+Steam and GOG players can exchange locally exported Replicator constructions by ZIPping the numbered blueprint folder and extracting it into the recipient's `UserConstructions` directory. With client/server 0.3.62, structures printed through the native Replicator are synchronised and persisted by the dedicated server, including Steam Workshop blueprints. See [Blueprint sharing](BLUEPRINTS.md) for instructions and the Multiplayer Rover example.
