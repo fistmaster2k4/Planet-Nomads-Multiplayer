@@ -12,11 +12,22 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 | Component | Version |
 | --- | --- |
-| Multiplayer Manager | **0.1.33** |
-| Multiplayer client mod | **0.3.60** |
-| Dedicated server | **0.3.60** |
+| Multiplayer Manager | **0.1.34** |
+| Multiplayer client mod | **0.3.62** |
+| Dedicated server | **0.3.62** |
 
-## What's new in 0.3.60
+## What's new in 0.3.62
+
+### Rotor settings, solar beacons and loading audio
+
+- Small and large flight rotors now retain their idle hover, stabilisation, forward steering and side steering settings between multiplayer sessions. Rotor configurations are also captured when printing blueprints through the Replicator.
+- Solar beacons correctly use their internal power supply without an external electrical connection. Navigation visibility, custom labels and selected navigation icons are persistent.
+- Gameplay audio is suppressed during multiplayer world initialisation, reducing machinery and other sound effects behind the loading screen.
+- Existing flight physics and vehicle controls remain unchanged.
+
+**Manager 0.1.34 includes matching multiplayer client and dedicated server 0.3.62.** Update both components together; older clients and servers are not compatible with 0.3.62.
+
+## Previous release: 0.3.60
 
 ### Moving Tool and object settings
 
