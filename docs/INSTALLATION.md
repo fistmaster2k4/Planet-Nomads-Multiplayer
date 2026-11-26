@@ -15,7 +15,7 @@
 5. For server hosting, open **SERVER**, choose the world, name, player limit, port and optional password, then click **SAVE SETTINGS**.
 6. Under **LAUNCH**, click **LAUNCH SERVER**. Use **PLAY GAME** to launch the client if installed locally.
 
-**Manager requirements:** Windows 10/11 and **.NET 8 Desktop Runtime (x64)**. Client installation also requires Planet Nomads **1.0.7.2**. The original game is available from [GOG](https://www.gog.com/en/game/planet_nomads).
+**Manager requirements:** Windows 10/11 and **.NET 8 Desktop Runtime (x64)**. Client installation also requires Planet Nomads **1.0.7.2**. The original game can be purchased from [GOG](https://www.gog.com/en/game/planet_nomads) (DRM-free) or [Humble Store](https://www.humblebundle.com/store/planet-nomads) (Steam keys, subject to availability). Both versions can play together in multiplayer.
 
 Three ready-to-play starter worlds are included: Day1, Day2 and Day3. See [starter worlds](SERVER.md#included-starter-worlds) for their different terrain settings. To use your own single-player world, follow the [world setup instructions](SERVER.md#using-your-own-world).
 

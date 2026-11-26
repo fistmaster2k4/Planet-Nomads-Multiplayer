@@ -240,7 +240,7 @@ The custom Planet Nomads grid includes five configurable controls for base light
 
 This is an optional companion grid using the game's native keyboard shortcuts. It works independently of the multiplayer mod and requires no additional game plugin. The ON indicator is momentary button-press feedback, not live equipment status.
 
-**Need the original game?** It's available on GOG: [Planet Nomads on GOG](https://www.gog.com/en/game/planet_nomads).
+**Need the original game?** [Planet Nomads on GOG](https://www.gog.com/en/game/planet_nomads) (DRM-free) or [Planet Nomads on Humble Store](https://www.humblebundle.com/store/planet-nomads) (Steam keys, subject to availability). Both versions can play together in multiplayer.
 
 **Unofficial fan-made mod.** Not affiliated with Craneballs. Planet Nomads and its original assets belong to their respective rights holders.
 
