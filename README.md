@@ -12,11 +12,38 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 | Component | Version |
 | --- | --- |
-| Multiplayer Manager | **0.1.34** |
-| Multiplayer client mod | **0.3.62** |
-| Dedicated server | **0.3.62** |
+| Multiplayer Manager | **0.1.35** |
+| Multiplayer client mod | **0.3.69** |
+| Dedicated server | **0.3.69** |
 
-## What's new in 0.3.62
+## What's new in 0.3.69
+
+### Expanded server-authoritative world persistence
+
+- Shared quest objectives, journal entries, story progression and technology unlocks are maintained by the server.
+- Custom block labels are available immediately on joining, without having to inspect each block first.
+- Doors retain their open or closed state.
+- Cryopod respawn availability and selection follow the shared world state, including power availability.
+- Winch and shackle connections, including cable length, persist between sessions.
+- Plant pot growth, fruit maturity and harvesting follow the authoritative world clock, including time advanced through sleeping. Harvested plants retain their state on reconnect.
+- Item spawner collection states persist so collected items do not reappear simply because a player reconnects.
+
+### Server-authoritative trees
+
+- Tree destruction and Terraformer restoration are controlled by the dedicated server.
+- Joining clients no longer upload their local tree catalogue or overwrite existing tree provenance.
+- Fixed tree provenance conflicts that could prevent players from joining existing worlds.
+- Existing tree destruction and restoration records are retained.
+
+### Fixes and upgrading
+
+- Corrected winch, shackle and plant pot welding thresholds to match native game behaviour.
+- Fixed plant maturity and harvesting availability by using the running authoritative world clock rather than a cleared loading-time clock replica.
+- Existing multiplayer worlds can be upgraded without a world reset or deleting persistence databases. Back up the entire world folder before updating.
+
+**Manager 0.1.35 includes matching multiplayer client and dedicated server 0.3.69.** Update both components together; use the matching 0.3.69 standalone client when installing manually.
+
+## Previous release: 0.3.62
 
 ### Rotor settings, solar beacons and loading audio
 
@@ -163,7 +190,7 @@ Available from the beginning of multiplayer survival, the Biomass Stove is a sel
 
 The Manager provides independent client and dedicated-server installation and update controls, plus per-world gameplay settings. It recognises managed files changed outside the Manager and supports updating either component separately. See [Manager controls](docs/MANAGER.md) and [starter worlds](docs/SERVER.md#included-starter-worlds).
 
-> **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
+> **Important:** Existing multiplayer worlds can be upgraded to 0.3.69 without resetting the world or deleting its persistence databases. Back up the entire world folder before updating. Compatibility with substantially older builds is not guaranteed.
 
 ## Multiplayer features
 

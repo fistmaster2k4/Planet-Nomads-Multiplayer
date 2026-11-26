@@ -1,4 +1,4 @@
-# Multiplayer Manager 0.1.34
+# Multiplayer Manager 0.1.35
 
 **Compatibility: Planet Nomads Multiplayer supports vanilla Planet Nomads 1.0.7.2 only (Steam or GOG). Wand and imported custom blueprints that overwrite existing block IDs are not supported.**
 
@@ -11,9 +11,9 @@ Choose **INSTALL CLIENT** for the Planet Nomads game folder or **INSTALL SERVER*
 
 The manager detects each installed component separately. **UPDATE CLIENT** and **UPDATE SERVER** appear when the packaged version or managed payload requires updating. It also recognises files changed or upgraded outside the Manager. Installing or updating one component leaves the other unchanged.
 
-The Manager 0.1.34 installer includes multiplayer client **0.3.62** and dedicated server **0.3.62**. Older clients and servers are not compatible with 0.3.62. Update both components when moving to this release. Existing worlds and live server configuration are preserved during server updates.
+The Manager 0.1.35 installer includes multiplayer client **0.3.69** and dedicated server **0.3.69**. Both components must run 0.3.69. Update both components when moving to this release. Existing worlds and live server configuration are preserved during server updates.
 
-> **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
+> **Important:** Existing multiplayer worlds can be upgraded to 0.3.69 without resetting the world or deleting its persistence databases. Back up the entire world folder before updating. Compatibility with substantially older builds is not guaranteed.
 
 If managed files were modified outside the Manager, an update asks for confirmation and preserves copies of those files before replacing them. Declining leaves the installation unchanged.
 
@@ -93,7 +93,17 @@ Under **OPTIONS → PLAYER PROFILE**, select **REPORT BUG** to collect informati
 
 World saves and databases are not included.
 
-### Multiplayer client/server 0.3.62 bundled improvements
+### Multiplayer client/server 0.3.69 bundled improvements
+
+**World persistence:** Shared quests and journals, technology unlocks, block labels on join, door states, Cryopod respawn availability, winch connections and cable length, plant pot growth and harvesting, and item spawner collection are maintained by the dedicated server.
+
+**Trees:** Tree destruction and Terraformer restoration are server-authoritative. Joining clients no longer upload their local tree catalogue, preventing provenance conflicts that could block joining existing worlds. Existing tree records are preserved.
+
+**Fixes:** Native welding thresholds for winches, shackles and plant pots are respected. Plant maturity and gather availability use the authoritative running world clock, including shared sleeping.
+
+See [What's new in 0.3.69](../README.md#whats-new-in-0369) for the full release overview.
+
+### Previous: multiplayer client/server 0.3.62 improvements
 
 **Rotor settings:** Small and large flight rotors retain idle hover, stabilisation and forward/side steering settings between sessions, including configurations captured from Replicator blueprints.
 
@@ -135,8 +145,8 @@ A Steam-built Workshop rover has been confirmed visible and usable from a GOG cl
 
 Client and server **0.3.34** add shared-world support for the automated **Biomass Miner**, using native terrain-contact checks for operation and displaying drilling progress, estimated yield and harvested output.
 
-This release also fixes multiplayer respawning and vehicle logout behaviour, and simplifies the pause menu to **Continue**, **Options** and **Logout**, so leaving a session no longer exits the game. See [the 0.3.34 notes](../README.md#previous-release-0334) and [the current 0.3.62 update](../README.md#whats-new-in-0362).
+This release also fixes multiplayer respawning and vehicle logout behaviour, and simplifies the pause menu to **Continue**, **Options** and **Logout**, so leaving a session no longer exits the game. See [the 0.3.34 notes](../README.md#previous-release-0334) and [the current 0.3.69 update](../README.md#whats-new-in-0369).
 
 ## Sharing blueprints
 
-Steam and GOG players can exchange locally exported Replicator constructions by ZIPping the numbered blueprint folder and extracting it into the recipient's `UserConstructions` directory. With client/server 0.3.62, structures printed through the native Replicator are synchronised and persisted by the dedicated server, including Steam Workshop blueprints. See [Blueprint sharing](BLUEPRINTS.md) for instructions and the Multiplayer Rover example.
+Steam and GOG players can exchange locally exported Replicator constructions by ZIPping the numbered blueprint folder and extracting it into the recipient's `UserConstructions` directory. With client/server 0.3.69, structures printed through the native Replicator are synchronised and persisted by the dedicated server, including Steam Workshop blueprints. See [Blueprint sharing](BLUEPRINTS.md) for instructions and the Multiplayer Rover example.

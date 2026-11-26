@@ -4,9 +4,9 @@
 
 ![SERVER screen](images/server.jpg)
 
-The current bundled dedicated server is **0.3.62**, compatible with multiplayer client **0.3.62**, supplied with Manager **0.1.34**. Update both client and server together; older versions are not compatible with 0.3.62.
+The current bundled dedicated server is **0.3.69**, compatible with multiplayer client **0.3.69**, supplied with Manager **0.1.35**. Update both client and server together to 0.3.69.
 
-> **Important:** Worlds created using older versions of Planet Nomads Multiplayer are not guaranteed to be compatible with this release. Back up existing worlds before updating. For the best experience, start a new world using one of the included starter worlds.
+> **Important:** Existing multiplayer worlds can be upgraded to 0.3.69 without resetting the world or deleting its persistence databases. Back up the entire world folder before updating. Compatibility with substantially older builds is not guaranteed.
 
 ### Database maintenance in 0.3.59
 
@@ -17,6 +17,15 @@ Dropped items use server-owned shared state. Connected players can see and colle
 World time is owned by the dedicated server. Joining and reconnecting players must receive and apply a fresh live server-clock reply before loading completes; connected clients then advance their sky phase at the same rate rather than applying different local sun-angle speed multipliers. The server manages independent weather schedules for the game's 25 biome profiles. Client-side sky, shelter and atmospheric rendering remain native.
 
 ## Multiplayer gameplay
+
+### Server-authoritative persistence in 0.3.69
+
+The dedicated server maintains the shared state of quest progression, journals and technology unlocks; block labels on join; door open/closed states; Cryopod respawn availability; winch/shackle connections and cable length; plant pot growth and harvesting; and collected item spawners. Plant growth follows server world time, including shared sleeping, and harvest state is retained when players reconnect.
+
+Tree destruction and Terraformer restoration are controlled by the dedicated server. Joining clients receive authoritative tree state rather than uploading their own tree catalogue. This prevents tree provenance conflicts during joining while preserving existing tree destruction and restoration records.
+
+The update does not require a world reset or deletion of existing persistence databases. See [What's new in 0.3.69](../README.md#whats-new-in-0369).
+
 
 Small and large flight rotor configurations (idle hover, stabilisation and forward/side steering) are saved by the dedicated server, including settings captured from printed blueprints. Solar beacons use their native internal power supply; their navigation visibility, custom labels and selected icons persist. Existing vehicle physics and controls remain unchanged.
 
@@ -93,7 +102,7 @@ Click **SAVE SETTINGS** when finished. Restart the server to load the saved sett
 
 ## World backups
 
-Back up the entire selected world folder, including `_main.db`, `_working.db` and all multiplayer persistence databases, before updating or changing game modes. The multiplayer databases store construction, containers, drops, electricity, environment, players, technology and quest progression. Copying only the two native databases is appropriate for importing a new single-player world, not for preserving a complete existing multiplayer world.
+Back up the entire selected world folder, including `_main.db`, `_working.db` and all multiplayer persistence databases, before updating or changing game modes. The multiplayer databases store construction, containers, drops, electricity, environment, players, technology, quest progression, tree destruction and restoration, and shared object state. Preserve all of them, including plant and item spawner records. Copying only the two native databases is appropriate for importing a new single-player world, not for preserving a complete existing multiplayer world.
 
 ## Allowing friends to connect
 
