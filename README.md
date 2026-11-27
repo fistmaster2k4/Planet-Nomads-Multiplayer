@@ -12,11 +12,23 @@ Play the original Planet Nomads with a multiplayer client mod, a dedicated serve
 
 | Component | Version |
 | --- | --- |
-| Multiplayer Manager | **0.1.35** |
-| Multiplayer client mod | **0.3.69** |
-| Dedicated server | **0.3.69** |
+| Multiplayer Manager | **0.1.36** |
+| Multiplayer client mod | **0.3.71** |
+| Dedicated server | **0.3.71** |
 
-## What's new in 0.3.69
+## What's new in 0.3.71
+
+### Connection reliability and diagnostics
+
+- Increased the client world-loading timeout from 120 to 300 seconds.
+- Extended server network inactivity tolerance to 360 seconds during world initialisation, returning to the normal 20-second timeout once the client is ready.
+- Improved client and server connection logging, including loading stages, elapsed time, outstanding readiness checks and disconnection diagnostics.
+
+These changes give slower clients more time to initialise larger worlds and help identify connection failures.
+
+**Manager 0.1.36 includes matching multiplayer client and dedicated server 0.3.71.** Update both components together; use the matching 0.3.71 standalone client when installing manually.
+
+## Previous release: 0.3.69
 
 ### Expanded server-authoritative world persistence
 
@@ -190,7 +202,7 @@ Available from the beginning of multiplayer survival, the Biomass Stove is a sel
 
 The Manager provides independent client and dedicated-server installation and update controls, plus per-world gameplay settings. It recognises managed files changed outside the Manager and supports updating either component separately. See [Manager controls](docs/MANAGER.md) and [starter worlds](docs/SERVER.md#included-starter-worlds).
 
-> **Important:** Existing multiplayer worlds can be upgraded to 0.3.69 without resetting the world or deleting its persistence databases. Back up the entire world folder before updating. Compatibility with substantially older builds is not guaranteed.
+> **Important:** Existing multiplayer worlds can be upgraded to 0.3.71 without resetting the world or deleting its persistence databases. Back up the entire world folder before updating. Compatibility with substantially older builds is not guaranteed.
 
 ## Multiplayer features
 
