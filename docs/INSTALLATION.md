@@ -2,11 +2,11 @@
 
 **Compatibility: Planet Nomads Multiplayer supports vanilla Planet Nomads 1.0.7.2 only (Steam or GOG). Wand and imported custom blueprints that overwrite existing block IDs are not supported.**
 
-## Windows — Multiplayer Manager 0.1.35
+## Windows — Multiplayer Manager 0.1.36
 
 ![INSTALL screen](images/install.jpg)
 
-1. Download the **0.1.35 Manager installer** from [GitHub Releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) and run the setup executable.
+1. Download the **0.1.36 Manager installer** from [GitHub Releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) and run the setup executable.
 2. Open **Planet Nomads Multiplayer Manager** using its desktop icon or Start Menu shortcut.
 3. Under **INSTALL**, choose the component you want:
    - **INSTALL CLIENT** — select your existing Planet Nomads game folder (containing `PlanetNomads.exe`), enter your player name, then install.
@@ -21,9 +21,9 @@ Three ready-to-play starter worlds are included: Day1, Day2 and Day3. See [start
 
 ## Standalone client — manual installation
 
-The [standalone client releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) provide the client without the Manager. Choose the **0.3.69 Standalone Client** package. A matching **0.3.69 dedicated server** is required.
+The [standalone client releases](https://github.com/fistmaster2k4/Planet-Nomads-Multiplayer/releases) provide the client without the Manager. Choose the **0.3.71 Standalone Client** package. A matching **0.3.71 dedicated server** is required.
 
-1. Download the standalone client ZIP from the **0.3.69 Standalone Client** release.
+1. Download the standalone client ZIP from the **0.3.71 Standalone Client** release.
 2. Open the Planet Nomads installation folder containing `PlanetNomads.exe`.
 3. Extract the ZIP **directly into that folder**, preserving its directory structure. It includes BepInEx, the matching multiplayer and TNet plugins, configuration files, Doorstop, `winhttp.dll`, and the `version.txt` file required for game version 1.0.7.2 compatibility (including GOG installations).
 4. Launch the game and select **Multiplayer** on the main menu.
@@ -48,7 +48,7 @@ The Replicator exports blueprints into the local `UserConstructions` folder on b
 
 ## Updates and removal
 
-> **Important:** Existing multiplayer worlds can be upgraded to 0.3.69 without resetting the world or deleting its persistence databases. Back up the entire world folder before updating. Compatibility with substantially older builds is not guaranteed.
+> **Important:** Existing multiplayer worlds can be upgraded to 0.3.71 without resetting the world or deleting its persistence databases. Back up the entire world folder before updating. Compatibility with substantially older builds is not guaranteed.
 
 ![Separate client and server update controls in Manager](images/manager-install-0.1.24.png)
 
@@ -58,9 +58,9 @@ The INSTALL screen has separate client and server destinations. Once a component
 - The manager detects the client and server independently. **UPDATE CLIENT** or **UPDATE SERVER** appears when the included version is newer than the installed component.
 - Updating one component leaves the other unchanged.
 - If managed files have changed outside the Manager, the Manager detects those changes and handles confirmation and backup before replacement. 
-- **Manager 0.1.35 includes client and dedicated server 0.3.69.** Update both components for this release; 0.3.69 is not compatible with older clients or servers.
-- Server updates preserve existing worlds and live server configuration. Do not delete the tree or other persistence databases when upgrading. See [What's new in 0.3.69](../README.md#whats-new-in-0369).
-- Dedicated server 0.3.69 retains the automatic database cleanup introduced in 0.3.59 and cleans affected container databases on startup, preserving current inventory and machine state. Back up your world before updating; no manual database maintenance is required.
+- **Manager 0.1.36 includes client and dedicated server 0.3.71.** Update both components to use the new connection timeouts and diagnostics.
+- Server updates preserve existing worlds and live server configuration. Do not delete the tree or other persistence databases when upgrading. See [What's new in 0.3.71](../README.md#whats-new-in-0371).
+- Dedicated server 0.3.71 retains the automatic database cleanup introduced in 0.3.59 and cleans affected container databases on startup, preserving current inventory and machine state. Back up your world before updating; no manual database maintenance is required.
 - **UNINSTALL** removes manager-managed client/server files while preserving saved worlds and unrelated files. Modified managed files may be retained.
 - Windows **Uninstall** removes the manager application and shortcuts.
 
