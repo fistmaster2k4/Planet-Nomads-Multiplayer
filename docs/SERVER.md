@@ -4,9 +4,15 @@
 
 ![SERVER screen](images/server.jpg)
 
-The current bundled dedicated server is **0.3.69**, compatible with multiplayer client **0.3.69**, supplied with Manager **0.1.35**. Update both client and server together to 0.3.69.
+The current bundled dedicated server is **0.3.71**, supplied with multiplayer client **0.3.71** and Manager **0.1.36**. Update both client and server together to 0.3.71.
 
-> **Important:** Existing multiplayer worlds can be upgraded to 0.3.69 without resetting the world or deleting its persistence databases. Back up the entire world folder before updating. Compatibility with substantially older builds is not guaranteed.
+> **Important:** Existing multiplayer worlds can be upgraded to 0.3.71 without resetting the world or deleting its persistence databases. Back up the entire world folder before updating. Compatibility with substantially older builds is not guaranteed.
+
+### Connection timeouts in 0.3.71
+
+The client allows up to 300 seconds for world-loading readiness. Server network inactivity tolerance is extended to 360 seconds during client initialisation and returns to the normal 20 seconds once the client is ready.
+
+Server logging now includes inactivity timeout changes, timeout disconnects, disconnect packets, world checkpoint preparation duration and connection closure diagnostics.
 
 ### Database maintenance in 0.3.59
 
@@ -24,7 +30,7 @@ The dedicated server maintains the shared state of quest progression, journals a
 
 Tree destruction and Terraformer restoration are controlled by the dedicated server. Joining clients receive authoritative tree state rather than uploading their own tree catalogue. This prevents tree provenance conflicts during joining while preserving existing tree destruction and restoration records.
 
-The update does not require a world reset or deletion of existing persistence databases. See [What's new in 0.3.69](../README.md#whats-new-in-0369).
+The update does not require a world reset or deletion of existing persistence databases. See [0.3.69 release notes](../README.md#previous-release-0369).
 
 
 Small and large flight rotor configurations (idle hover, stabilisation and forward/side steering) are saved by the dedicated server, including settings captured from printed blueprints. Solar beacons use their native internal power supply; their navigation visibility, custom labels and selected icons persist. Existing vehicle physics and controls remain unchanged.
